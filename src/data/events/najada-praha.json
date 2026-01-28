@@ -1,0 +1,19 @@
+[
+  {
+    "title": "weekly Najáda Praha",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-01-30T17:30",
+      "endDate": "2026-06-30T17:30",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    }
+  }
+]

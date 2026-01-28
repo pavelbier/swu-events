@@ -1,0 +1,45 @@
+[
+  {
+    "title": "weekly Xzone Brno",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-01-27T17:00",
+      "endDate": "2026-06-30T17:00",
+      "frequency": "weekly",
+      "duration": 4,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Brno",
+      "place": "Xzone",
+      "lat": 49.22133599629136,
+      "lng": 16.596614228835808
+    }
+  },
+  {
+    "title": "SW:U A Lawless Time Prerelease turnaj",
+    "type": "prerelease",
+    "dateFrom": "2026-03-07T11:00",
+    "dateTo": "2026-03-07T15:00",
+    "location": {
+      "city": "Brno",
+      "place": "Xzone",
+      "lat": 49.22133599629136,
+      "lng": 16.596614228835808
+    },
+    "url": "https://melee.gg/Tournament/View/398957"
+  },
+  {
+    "title": "SW:U Secrets of Power Store Showndown Tournament",
+    "type": "showdown",
+    "dateFrom": "2026-02-21T10:00",
+    "dateTo": "2026-02-21T14:00",
+    "location": {
+      "city": "Brno",
+      "place": "Xzone",
+      "lat": 49.22133599629136,
+      "lng": 16.596614228835808
+    },
+    "url": "https://melee.gg/Tournament/View/398612"
+  }
+]

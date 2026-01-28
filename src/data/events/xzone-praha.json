@@ -1,0 +1,45 @@
+[
+  {
+    "title": "weekly Xzone HUB Praha",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-01-28T18:00",
+      "endDate": "2026-06-30T18:00",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Praha",
+      "place": "Xzone HUB, OC Lužiny",
+      "lat": 50.043853664895884,
+      "lng": 14.331860728835812
+    }
+  },
+  {
+    "title": "Planetary - Xzone HUB Praha",
+    "type": "planetary",
+    "dateFrom": "2026-02-28T09:00",
+    "dateTo": "2026-02-28T17:00",
+    "location": {
+      "city": "Praha",
+      "place": "Xzone HUB, OC Lužiny",
+      "lat": 50.043853664895884,
+      "lng": 14.331860728835812
+    },
+    "url": "https://www.xzone.cz/blog/xzone-prague-planetary-qualifier-episode-ii"
+  },
+  {
+    "title": "Xzone HUB Prerelease",
+    "type": "prerelease",
+    "dateFrom": "2026-03-08T16:00",
+    "dateTo": "2026-03-08T20:00",
+    "location": {
+      "city": "Praha",
+      "place": "Xzone HUB, OC Lužiny",
+      "lat": 50.043853664895884,
+      "lng": 14.331860728835812
+    },
+    "url": "https://melee.gg/Tournament/View/400307"
+  }
+]

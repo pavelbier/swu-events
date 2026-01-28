@@ -1,0 +1,32 @@
+[
+  {
+    "title": "weekly Dragon World Store Slaný",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-02-03T17:00",
+      "endDate": "2026-06-30T17:00",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    }
+  },
+  {
+    "title": "Dragon World Store Showdown - SEC",
+    "type": "showdown",
+    "dateFrom": "2026-02-07T12:00",
+    "dateTo": "2026-02-07T17:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://melee.gg/Tournament/View/398135"
+  }
+]

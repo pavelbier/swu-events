@@ -1,0 +1,31 @@
+[
+  {
+    "title": "weekly Hero Brno",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-01-29T18:00",
+      "endDate": "2026-06-25T18:00",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Brno",
+      "place": "HERO Store",
+      "lat": 49.191549141374594,
+      "lng": 16.620843170945896
+    }
+  },
+  {
+    "title": "A Lawless Time pre-release Hero",
+    "type": "prerelease",
+    "dateFrom": "2026-03-11T18:00",
+    "dateTo": "2026-03-11T22:00",
+    "location": {
+      "city": "Brno",
+      "place": "Hero Store",
+      "lat": 49.191549141374594,
+      "lng": 16.620843170945896
+    }
+  }
+]

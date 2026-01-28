@@ -1,0 +1,20 @@
+[
+  {
+    "title": "weekly Black Lotus Ostrava",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-02-02T16:00",
+      "endDate": "2026-06-30T16:00",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Ostrava",
+      "place": "Black Lotus",
+      "lat": 49.83461688579627,
+      "lng": 18.29047933948122
+    },
+    "url": "https://www.facebook.com/groups/769631581921123"
+  }
+]

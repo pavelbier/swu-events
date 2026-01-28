@@ -1,0 +1,20 @@
+[
+  {
+    "title": "weekly KODEK Kolín",
+    "type": "weekly",
+    "url": "https://melee.gg/Hub/Organization/17269",
+    "recurrence": {
+      "startDate": "2026-01-29T17:00",
+      "endDate": "2026-06-30T17:00",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Kolín",
+      "place": "KODEK",
+      "lat": 50.023831637256066,
+      "lng": 15.201706052774712
+    }
+  }
+]

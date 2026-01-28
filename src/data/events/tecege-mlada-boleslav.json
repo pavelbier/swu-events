@@ -1,0 +1,32 @@
+[
+  {
+    "title": "weekly TeCeGe Mladá Boleslav",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-01-29T17:00",
+      "endDate": "2026-06-30T17:00",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Mladá Boleslav",
+      "place": "TeCeGe",
+      "lat": 50.4214399684709,
+      "lng": 14.91318772732187
+    }
+  },
+  {
+    "title": "TeCeGe Store Showdown",
+    "type": "showdown",
+    "dateFrom": "2026-02-22T09:30",
+    "dateTo": "2026-02-22T13:30",
+    "location": {
+      "city": "Mladá Boleslav",
+      "place": "TeCeGe",
+      "lat": 50.4214399684709,
+      "lng": 14.91318772732187
+    },
+    "url": "https://melee.gg/Tournament/View/397786"
+  }
+]

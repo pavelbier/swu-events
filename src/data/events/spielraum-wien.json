@@ -1,0 +1,28 @@
+[
+  {
+    "title": "SpielRaum Store Showdown",
+    "type": "showdown",
+    "dateFrom": "2026-01-31T12:00",
+    "dateTo": "2026-01-31T16:00",
+    "location": {
+      "city": "Wien",
+      "place": "SpielRaum",
+      "lat": 48.19628951253475,
+      "lng": 16.348276865906392
+    },
+    "url": "https://www.spielraum.co.at/de/page/competitions/star-wars-termine/star-wars-store-showdown"
+  },
+  {
+    "title": "Planetary - SpielRaum Wien",
+    "type": "planetary",
+    "dateFrom": "2026-02-21T10:00",
+    "dateTo": "2026-02-21T18:00",
+    "location": {
+      "city": "Wien",
+      "place": "SpielRaum",
+      "lat": 48.19628951253475,
+      "lng": 16.348276865906392
+    },
+    "url": "https://www.spielraum.co.at/de/page/competitions/star-wars-termine/planetary-qualifier"
+  }
+]
