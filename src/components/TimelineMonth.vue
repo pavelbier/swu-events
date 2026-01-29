@@ -61,7 +61,7 @@ const days = computed(() => {
   let d = start
   while (d.isBefore(end) || d.isSame(end, 'day')) {
     const dayEvents = store.events.filter(
-      e => d.isBetween(dayjs(e.dateFrom), dayjs(e.dateTo), 'day', '[]')
+      e => d.isBetween(dayjs(e.dateFrom), dayjs(e.dateTo), 'day', '[]') && store.selectedTypes.includes(e.type)
     )
 
     arr.push({
@@ -155,7 +155,7 @@ onMounted(() => {
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1800px) {
   .timeline {
     justify-content: flex-start;
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="panel">
-    <h3>Akce</h3>
+    <h3 v-if="store.filteredEvents.length > 0">{{ eventsHeading }}</h3>
 
     <div class="events-section">
       <div v-if="!store.displayedEvents.length" class="no-events">
@@ -87,10 +87,19 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import dayjs from '@/dayjs'
 import { useEventsStore } from '@/stores/eventsStore'
 
 const store = useEventsStore()
+
+const eventsHeading = computed(() => {
+  const today = dayjs().format('YYYY-MM-DD')
+  if (store.selectedDate === today) {
+    return 'Dnešní SWU akce'
+  }
+  return `SWU akce dne ${dayjs(store.selectedDate).format('D.M.YYYY')}`
+})
 const format = d => dayjs(d).format('dd D.M. HH:mm')
 const formatEnd = (dateFrom, dateTo) => {
   const from = dayjs(dateFrom)
@@ -176,6 +185,7 @@ h3 {
 }
 
 .nearby-label {
+  margin-top: 48px;
   padding: 8px 0;
   font-size: 0.9em;
   color: #666;
@@ -306,12 +316,13 @@ h3 {
 }
 
 .filters-container {
+
   margin-top: 16px;
   padding: 12px 14px;
   border-top: 1px solid #ddd;
   flex-shrink: 0;
   position: sticky;
-  bottom: 0;
+  bottom: -200px;
   background: #f0f4f8;
   padding-left: 14px;
   padding-right: 14px;
@@ -320,6 +331,11 @@ h3 {
   border: 1px solid #d0d8e0;
   border-top: 2px solid #b0c0d0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  &:hover, &:focus-within {
+    bottom: 0;
+    transition: bottom 0.3s ease;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -329,6 +345,13 @@ h3 {
     padding: 5px 10px;
   }
 }
+
+@media screen and (max-height: 1000px) {
+  .filters-container {
+    position: static;
+  }
+}
+
 
 .type-filter {
   margin-bottom: 14px;
@@ -379,11 +402,15 @@ h3 {
   transition: background-color 0.2s;
 }
 
-.type-checkbox input:checked + .type-label,
 .type-label:has(input:checked) {
-  background-color: var(--primary-blue);
   color: white;
 }
+
+.type-label.weekly:has(input:checked) { background-color: #007bff; }
+.type-label.showdown:has(input:checked) { background-color: #20c997; }
+.type-label.prerelease:has(input:checked) { background-color: #ffc107; color: #333; }
+.type-label.planetary:has(input:checked) { background-color: #303030; }
+.type-label.tournament:has(input:checked) { background-color: #6f42c1; }
 
 .distance-slider-container {
   flex-shrink: 0;

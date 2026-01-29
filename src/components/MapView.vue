@@ -35,12 +35,12 @@
         </LPopup>
       </LMarker>
         
-      <!-- Bílé markery pro všechny akce -->
+      <!-- Markery pro všechny akce (modré pro dnešní, šedé pro ostatní) -->
       <LMarker
         v-for="e in store.filteredEvents"
-        :key="'white-' + e.id"
+        :key="'event-' + e.id"
         :lat-lng="[e.location.lat, e.location.lng]"
-        :icon="whiteIcon"
+        :icon="getEventIcon(e)"
       >
         <LPopup>
           <strong>{{ e.title }}</strong><br />
@@ -82,6 +82,7 @@ import { onMounted } from 'vue'
 import { useEventsStore } from '@/stores/eventsStore'
 import { LMap, LTileLayer, LMarker, LPopup, LCircle } from '@vue-leaflet/vue-leaflet'
 import L from 'leaflet'
+import dayjs from '@/dayjs'
 
 const store = useEventsStore()
 
@@ -101,6 +102,13 @@ const createMarkerIcon = (color) => L.icon({
 const whiteIcon = createMarkerIcon('#cccccc')
 const blueIcon = createMarkerIcon('#007bff')
 const greenIcon = createMarkerIcon('#90ee90')
+
+// Vrátí modrou ikonu pro dnešní události, jinak bílou
+const getEventIcon = (event) => {
+  const today = dayjs().format('YYYY-MM-DD')
+  const eventDate = dayjs(event.dateFrom).format('YYYY-MM-DD')
+  return eventDate === today ? blueIcon : whiteIcon
+}
 
 // Ikona pro aktuální pozici uživatele
 const currentLocationIcon = L.icon({
