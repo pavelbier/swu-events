@@ -1,6 +1,53 @@
 import { defineStore } from 'pinia'
 import dayjs from '@/dayjs'
 
+// Pomocné funkce pro práci s URL
+function getUrlParams() {
+  const params = new URLSearchParams(window.location.search)
+  return {
+    date: params.get('date'),
+    types: params.get('types'),
+    distance: params.get('distance'),
+    lat: params.get('lat'),
+    lng: params.get('lng')
+  }
+}
+
+function updateUrl(state) {
+  const params = new URLSearchParams()
+
+  // Datum přidej jen pokud není dnešní
+  const today = dayjs().format('YYYY-MM-DD')
+  if (state.selectedDate !== today) {
+    params.set('date', state.selectedDate)
+  }
+
+  // Typy přidej jen pokud nejsou výchozí
+  const defaultTypes = ['weekly', 'showdown', 'prerelease', 'tournament']
+  const typesChanged = state.selectedTypes.length !== defaultTypes.length ||
+    !state.selectedTypes.every(t => defaultTypes.includes(t))
+  if (typesChanged) {
+    params.set('types', state.selectedTypes.join(','))
+  }
+
+  // Vzdálenost přidej jen pokud není výchozí
+  if (state.maxDistance !== 300) {
+    params.set('distance', state.maxDistance.toString())
+  }
+
+  // Pozice mapy - přidej jen pokud není výchozí (střed ČR)
+  const defaultLat = 49.8175
+  const defaultLng = 15.4730
+  if (Math.abs(state.mapCenter.lat - defaultLat) > 0.01 || Math.abs(state.mapCenter.lng - defaultLng) > 0.01) {
+    params.set('lat', state.mapCenter.lat.toFixed(4))
+    params.set('lng', state.mapCenter.lng.toFixed(4))
+  }
+
+  const query = params.toString()
+  const newUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname
+  window.history.replaceState({}, '', newUrl)
+}
+
 // Načíst všechny JSON soubory z adresáře events
 const eventFiles = import.meta.glob('@/data/events/*.json', { eager: true })
 
@@ -78,21 +125,39 @@ const expandedEvents = expandRecurringEvents(events)
 
 export const useEventsStore = defineStore('events', {
   state: () => {
-    // Načíst maxDistance z localStorage
-    const savedDistance = localStorage.getItem('maxDistance')
-    const maxDistance = savedDistance ? parseInt(savedDistance, 10) : 300
+    const urlParams = getUrlParams()
 
-    // Načíst selectedTypes z localStorage
+    // Datum: URL > dnešek
+    const selectedDate = urlParams.date || dayjs().format('YYYY-MM-DD')
+
+    // Vzdálenost: URL > localStorage > default
+    const savedDistance = localStorage.getItem('maxDistance')
+    const maxDistance = urlParams.distance
+      ? parseInt(urlParams.distance, 10)
+      : (savedDistance ? parseInt(savedDistance, 10) : 300)
+
+    // Typy: URL > localStorage > default
     const savedTypes = localStorage.getItem('selectedTypes')
-    const selectedTypes = savedTypes ? JSON.parse(savedTypes) : ['weekly', 'showdown', 'prerelease', 'tournament']
+    const defaultTypes = ['weekly', 'showdown', 'prerelease', 'tournament']
+    const selectedTypes = urlParams.types
+      ? urlParams.types.split(',').filter(t => t)
+      : (savedTypes ? JSON.parse(savedTypes) : defaultTypes)
+
+    // Pozice mapy: URL > default (střed ČR)
+    const defaultLat = 49.8175
+    const defaultLng = 15.4730
+    const mapCenter = {
+      lat: urlParams.lat ? parseFloat(urlParams.lat) : defaultLat,
+      lng: urlParams.lng ? parseFloat(urlParams.lng) : defaultLng
+    }
 
     return {
       events: expandedEvents,
-      selectedDate: dayjs().format('YYYY-MM-DD'),
-      mapCenter: { lat: 49.8175, lng: 15.4730 }, // střed ČR
+      selectedDate,
+      mapCenter,
       zoom: 8,
-      maxDistance: maxDistance,
-      selectedTypes: selectedTypes,
+      maxDistance,
+      selectedTypes,
       selectedEvent: null,
       hoveredEvent: null
     }
@@ -174,14 +239,17 @@ export const useEventsStore = defineStore('events', {
   actions: {
     setDate(date) {
       this.selectedDate = date
+      updateUrl(this)
     },
     setMaxDistance(distance) {
       this.maxDistance = distance
       localStorage.setItem('maxDistance', distance.toString())
+      updateUrl(this)
     },
     setSelectedTypes(types) {
       this.selectedTypes = types
       localStorage.setItem('selectedTypes', JSON.stringify(types))
+      updateUrl(this)
     },
     selectEvent(event) {
       this.selectedEvent = event
@@ -189,10 +257,15 @@ export const useEventsStore = defineStore('events', {
     setHoveredEvent(event) {
       this.hoveredEvent = event
     },
+    setMapCenter(center) {
+      this.mapCenter = center
+      updateUrl(this)
+    },
     resetToToday() {
       this.selectedDate = dayjs().format('YYYY-MM-DD')
       this.selectedEvent = null
       this.hoveredEvent = null
+      updateUrl(this)
     }
   }
 })

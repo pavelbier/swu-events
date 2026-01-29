@@ -126,10 +126,10 @@ const currentLocationIcon = L.icon({
 
 const onMove = (center) => {
   // center je objekt typu LatLng
-  store.mapCenter = {
+  store.setMapCenter({
     lat: center.lat,
     lng: center.lng
-  }
+  })
 }
 
 const resetToToday = () => {
@@ -137,15 +137,18 @@ const resetToToday = () => {
 }
 
 onMounted(() => {
-  // Pokus o geolokaci
-  if (navigator.geolocation) {
+  // Pokus o geolokaci - ale jen pokud není pozice z URL
+  const urlParams = new URLSearchParams(window.location.search)
+  const hasUrlPosition = urlParams.has('lat') && urlParams.has('lng')
+
+  if (!hasUrlPosition && navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         // Úspěch - nastav aktuální pozici
-        store.mapCenter = {
+        store.setMapCenter({
           lat: position.coords.latitude,
           lng: position.coords.longitude
-        }
+        })
       },
       (error) => {
         // Selhání - zůstane fallback na střed ČR
