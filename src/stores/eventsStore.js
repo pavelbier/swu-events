@@ -330,6 +330,14 @@ export const useEventsStore = defineStore('events', {
     },
     selectEvent(event) {
       this.selectedEvent = event
+      if (event) {
+        // Přesunout datum na den vybrané akce
+        const eventDate = dayjs(event.dateFrom).format('YYYY-MM-DD')
+        if (this.selectedDate !== eventDate) {
+          this.selectedDate = eventDate
+          updateUrl(this)
+        }
+      }
     },
     setHoveredEvent(event) {
       this.hoveredEvent = event

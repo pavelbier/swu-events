@@ -38,7 +38,7 @@ import dayjs from '@/dayjs'
 import { useEventsStore } from '@/stores/eventsStore'
 
 const store = useEventsStore()
-const currentMonth = ref(dayjs().startOf('month'))
+const currentMonth = ref(dayjs(store.selectedDate).startOf('month'))
 const timelineEl = ref(null)
 const activeDayEl = ref(null)
 
