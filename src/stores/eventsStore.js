@@ -1,6 +1,19 @@
 import { defineStore } from 'pinia'
 import dayjs from '@/dayjs'
 
+// GitHub konfigurace - uprav podle svého repozitáře
+const GITHUB_OWNER = 'pavelbier'
+const GITHUB_REPO = 'swu-events'
+const GITHUB_BRANCH = 'main'
+const EVENTS_PATH = 'src/data/events'
+
+// Pro DEV režim - načíst lokální JSON soubory
+const localEventFiles = import.meta.glob('@/data/events/*.json', { eager: true })
+
+function loadEventsFromLocal() {
+  return Object.values(localEventFiles).flatMap(module => module.default)
+}
+
 // Pomocné funkce pro práci s URL
 function getUrlParams() {
   const params = new URLSearchParams(window.location.search)
@@ -48,11 +61,47 @@ function updateUrl(state) {
   window.history.replaceState({}, '', newUrl)
 }
 
-// Načíst všechny JSON soubory z adresáře events
-const eventFiles = import.meta.glob('@/data/events/*.json', { eager: true })
+// Funkce pro načtení seznamu JSON souborů z GitHub API
+async function fetchEventFilesFromGitHub() {
+  const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${EVENTS_PATH}?ref=${GITHUB_BRANCH}`
 
-// Spojit všechna data do jednoho pole
-const events = Object.values(eventFiles).flatMap(module => module.default)
+  const response = await fetch(apiUrl)
+  if (!response.ok) {
+    throw new Error(`GitHub API error: ${response.status}`)
+  }
+
+  const files = await response.json()
+  return files.filter(f => f.name.endsWith('.json'))
+}
+
+// Funkce pro načtení obsahu JSON souboru z GitHubu
+async function fetchJsonFile(filename) {
+  const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${EVENTS_PATH}/${filename}`
+
+  const response = await fetch(rawUrl)
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${filename}: ${response.status}`)
+  }
+
+  return response.json()
+}
+
+// Funkce pro načtení všech událostí z GitHubu
+async function loadEventsFromGitHub() {
+  const files = await fetchEventFilesFromGitHub()
+  const allEvents = []
+
+  for (const file of files) {
+    const events = await fetchJsonFile(file.name)
+    if (Array.isArray(events)) {
+      allEvents.push(...events)
+    } else {
+      allEvents.push(events)
+    }
+  }
+
+  return allEvents
+}
 
 function distance(lat1, lng1, lat2, lng2) {
   const toRad = deg => (deg * Math.PI) / 180
@@ -82,7 +131,7 @@ function expandRecurringEvents(events) {
     }
 
     // Expanduj opakující se událost
-    const { startDate, endDate, frequency, duration, excludeDates = [] } = event.recurrence
+    const { startDate, endDate, frequency, duration, excludeDates = [], dateOverrides = {} } = event.recurrence
     let currentDate = dayjs(startDate)
     const finalDate = dayjs(endDate)
     const excludeSet = new Set(excludeDates.map(d => dayjs(d).format('YYYY-MM-DD')))
@@ -95,14 +144,18 @@ function expandRecurringEvents(events) {
         const eventStart = currentDate.format('YYYY-MM-DDTHH:mm')
         const eventEnd = currentDate.add(duration, 'hour').format('YYYY-MM-DDTHH:mm')
 
+        // Získat případné přepsání pro toto datum
+        const override = dateOverrides[dateStr] || {}
+
         expandedEvents.push({
           id: idCounter++,
-          title: event.title,
+          title: override.title || event.title,
           type: event.type,
           dateFrom: eventStart,
           dateTo: eventEnd,
           location: event.location,
-          url: event.url
+          url: override.url || event.url,
+          description: override.description || null
         })
       }
 
@@ -119,9 +172,6 @@ function expandRecurringEvents(events) {
 
   return expandedEvents
 }
-
-// Expanduj události při načtení
-const expandedEvents = expandRecurringEvents(events)
 
 export const useEventsStore = defineStore('events', {
   state: () => {
@@ -152,7 +202,9 @@ export const useEventsStore = defineStore('events', {
     }
 
     return {
-      events: expandedEvents,
+      events: [],
+      isLoading: true,
+      loadError: null,
       selectedDate,
       mapCenter,
       zoom: 8,
@@ -237,6 +289,31 @@ export const useEventsStore = defineStore('events', {
     }
   },
   actions: {
+    async loadEvents() {
+      this.isLoading = true
+      this.loadError = null
+
+      try {
+        let rawEvents
+
+        if (import.meta.env.DEV) {
+          // DEV režim - načíst z lokálních souborů
+          rawEvents = loadEventsFromLocal()
+          console.log('Načítám události z lokálních souborů (DEV)')
+        } else {
+          // PROD režim - načíst z GitHubu
+          rawEvents = await loadEventsFromGitHub()
+          console.log('Načítám události z GitHubu (PROD)')
+        }
+
+        this.events = expandRecurringEvents(rawEvents)
+      } catch (error) {
+        console.error('Chyba při načítání událostí:', error)
+        this.loadError = error.message
+      } finally {
+        this.isLoading = false
+      }
+    },
     setDate(date) {
       this.selectedDate = date
       updateUrl(this)

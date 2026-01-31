@@ -3,7 +3,16 @@
     <h3 v-if="store.filteredEvents.length > 0">{{ eventsHeading }}</h3>
 
     <div class="events-section">
-      <div v-if="!store.displayedEvents.length" class="no-events">
+      <div v-if="store.isLoading" class="loading">
+        Načítám události...
+      </div>
+
+      <div v-else-if="store.loadError" class="error">
+        Chyba při načítání: {{ store.loadError }}
+        <button @click="store.loadEvents()">Zkusit znovu</button>
+      </div>
+
+      <div v-else-if="!store.displayedEvents.length" class="no-events">
         Žádné akce pro tento den a ani další dny v zadaném dosahu {{ store.maxDistance }} km.
       </div>
 
@@ -27,6 +36,10 @@
         <div class="header">
           <span class="title">{{ e.title }}</span>
           <span class="type" :class="e.type">{{ getTypeLabel(e.type) }}</span>
+        </div>
+
+        <div v-if="e.description" class="event-description">
+          {{ e.description }}
         </div>
 
         <div v-if="e.url" class="event-url">
@@ -183,6 +196,36 @@ h3 {
   font-style: italic;
 }
 
+.loading {
+  padding: 40px 20px;
+  text-align: center;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.error {
+  padding: 20px;
+  text-align: center;
+  color: #dc3545;
+  background: #fff5f5;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.error button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.error button:hover {
+  background: #0056b3;
+}
+
 .nearby-label {
   margin-top: 48px;
   padding: 8px 0;
@@ -268,6 +311,23 @@ h3 {
   border-radius: 6px;
   color: white;
   background-color: var(--primary-blue);
+}
+
+.event-description {
+  font-size: 0.85em;
+  color: #666;
+  font-style: italic;
+  margin: 4px 0 6px 0;
+  padding: 4px 8px;
+  background: rgba(0, 123, 255, 0.08);
+  border-radius: 4px;
+  border-left: 3px solid var(--primary-blue);
+}
+
+.event-card.on-selected-day .event-description {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.15);
+  border-left-color: rgba(255, 255, 255, 0.5);
 }
 
 .event-url {

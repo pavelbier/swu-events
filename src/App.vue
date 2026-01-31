@@ -16,6 +16,12 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import MapView from '@/components/MapView.vue'
 import EventPanel from '@/components/EventPanel.vue'
 import TimelineMonth from '@/components/TimelineMonth.vue'
+import { useEventsStore } from '@/stores/eventsStore'
+
+const store = useEventsStore()
+
+// Načíst události z GitHubu při startu
+store.loadEvents()
 
 // Výchozí šířka panelu
 const DEFAULT_PANEL_WIDTH = 380

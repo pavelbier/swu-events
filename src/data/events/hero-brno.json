@@ -7,7 +7,13 @@
       "endDate": "2026-06-25T18:00",
       "frequency": "weekly",
       "duration": 3,
-      "excludeDates": []
+      "excludeDates": [],
+      "dateOverrides": {
+        "2026-02-05": {
+          "title": "Weekly Hero - Rebelové vs Imperial",
+          "url": "https://discord.com/channels/1266041085466247230/1326233087021023232/1466712332754489404"
+        }
+      }
     },
     "location": {
       "city": "Brno",
