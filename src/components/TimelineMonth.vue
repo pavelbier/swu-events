@@ -80,17 +80,30 @@ const days = computed(() => {
   return arr
 })
 
-// Scroll na aktivní den, když se změní selectedDate
-watch(() => store.selectedDate, () => {
+// Při změně selectedDate přepni měsíc (pokud je jiný) a scrollni na den
+watch(() => store.selectedDate, (newDate) => {
+  const newMonth = dayjs(newDate).startOf('month')
+  if (!newMonth.isSame(currentMonth.value, 'month')) {
+    currentMonth.value = newMonth
+  }
   scrollToActiveDay()
 })
 
+const scrollToStart = async () => {
+  await nextTick()
+  if (timelineEl.value) {
+    timelineEl.value.scrollTo({ left: 0, behavior: 'instant' })
+  }
+}
+
 const prevMonth = () => {
   currentMonth.value = currentMonth.value.subtract(1, 'month')
+  scrollToStart()
 }
 
 const nextMonth = () => {
   currentMonth.value = currentMonth.value.add(1, 'month')
+  scrollToStart()
 }
 
 // Scroll na aktivní den při prvním mounted
@@ -106,7 +119,7 @@ onMounted(() => {
   background: #fafafa;
   border-top: 1px solid #e0e0e0;
   box-sizing: border-box;
-  grid-column: 1 / 3;
+  grid-column: 1 / 4;
   grid-row: 2 / 3;
 }
 

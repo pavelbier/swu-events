@@ -160,11 +160,10 @@ const toggleType = (type) => {
   background: #f9f9f9;
   height: 100%;
   overflow-y: auto;
-  border-left: 1px solid #e0e0e0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  grid-column: 2 / 3;
+  grid-column: 3 / 4;
   grid-row: 1 / 2;
   position: relative;
 }
@@ -340,9 +339,67 @@ h3 {
 
 @media screen and (max-width: 768px) {
   .filters-container {
-    margin-top: 0;
-    margin-right: 20px;
-    padding: 5px 10px;
+    order: -1;
+    margin: 0;
+    margin-right: 12px;
+    padding: 8px;
+    width: 160px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    align-self: stretch;
+  }
+
+  .type-filter {
+    margin-bottom: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .type-filter > label {
+    font-size: 0.7em;
+    margin-bottom: 6px;
+  }
+
+  .type-checkboxes {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .type-label {
+    font-size: 0.7em;
+    padding: 3px 6px;
+    width: 100%;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  .type-checkbox input {
+    width: 14px;
+    height: 14px;
+  }
+
+  .distance-slider-container label {
+    font-size: 0.7em;
+    margin-bottom: 4px;
+  }
+
+  .distance-slider {
+    height: 4px;
+  }
+
+  .distance-slider::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  .slider-labels {
+    font-size: 0.65em;
   }
 }
 
