@@ -1,9 +1,26 @@
 [
   {
-    "title": "weekly iHRYsko store Bratislava",
+    "title": "weekly - Casual iHRYsko",
     "type": "weekly",
     "recurrence": {
-      "startDate": "2026-01-31T17:30",
+      "startDate": "2026-02-06T17:30",
+      "endDate": "2026-06-30T17:30",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": []
+    },
+    "location": {
+      "city": "Bratislava",
+      "place": "iHRYsko store",
+      "lat": 48.16823106987522,
+      "lng": 17.138407074479147
+    }
+  },
+  {
+    "title": "weekly - Competitive iHRYsko",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-02-09T17:30",
       "endDate": "2026-06-30T17:30",
       "frequency": "weekly",
       "duration": 3,
