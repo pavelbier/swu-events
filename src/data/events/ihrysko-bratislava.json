@@ -7,7 +7,12 @@
       "endDate": "2026-06-30T17:30",
       "frequency": "weekly",
       "duration": 3,
-      "excludeDates": []
+      "excludeDates": [],
+      "dateOverrides": {
+        "2026-02-06": {
+          "url": "https://melee.gg/Tournament/View/402667"
+        }
+      }
     },
     "location": {
       "city": "Bratislava",
