@@ -10,7 +10,7 @@
 
        <!-- Tile Layer -->
       <LTileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
       />
 
       <!-- Kruh zobrazující dosah hledání akcí -->
@@ -88,10 +88,10 @@ const store = useEventsStore()
 
 // Barvy pro Leaflet komponenty (musí být JS hodnoty, ne CSS proměnné)
 const COLORS = {
-  primary: '#007bff',
-  markerDefault: '#cccccc',
-  markerHover: '#90ee90',
-  location: '#4285F4'
+  primary: '#FFE81F',
+  markerDefault: '#555555',
+  markerHover: '#4BD5EE',
+  location: '#4BD5EE'
 }
 
 // Vypočítat zoom tak, aby kruh byl vidět

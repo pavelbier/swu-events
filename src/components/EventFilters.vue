@@ -108,7 +108,7 @@ const toggleType = (type) => {
   padding: 4px 8px;
   border-radius: 12px;
   color: var(--text-primary);
-  background-color: #e8e8e8;
+  background-color: var(--border-light);
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -122,7 +122,7 @@ const toggleType = (type) => {
 
 .type-label.weekly:has(input:checked) { background-color: var(--type-weekly); }
 .type-label.showdown:has(input:checked) { background-color: var(--type-showdown); }
-.type-label.prerelease:has(input:checked) { background-color: var(--type-prerelease); color: var(--text-primary); }
+.type-label.prerelease:has(input:checked) { background-color: var(--type-prerelease); color: #1a1a1a; }
 .type-label.planetary:has(input:checked) { background-color: var(--type-planetary); }
 .type-label.tournament:has(input:checked) { background-color: var(--type-tournament); }
 

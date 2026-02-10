@@ -180,7 +180,7 @@ h3 {
 }
 
 .error button:hover {
-  background: #0056b3;
+  background: #cc9a00;
 }
 
 .nearby-label {
@@ -227,7 +227,7 @@ h3 {
 
 .event-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: var(--shadow-logo-hover);
   opacity: 1 !important;
 }
 
@@ -287,7 +287,7 @@ h3 {
 
 .type.weekly { background-color: var(--type-weekly); }
 .type.showdown { background-color: var(--type-showdown); }
-.type.prerelease { background-color: var(--type-prerelease); color: var(--text-primary); }
+.type.prerelease { background-color: var(--type-prerelease); color: #1a1a1a; }
 .type.planetary { background-color: var(--type-planetary); }
 .type.tournament { background-color: var(--type-tournament); }
 

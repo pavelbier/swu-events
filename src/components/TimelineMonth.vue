@@ -19,6 +19,7 @@
           hasEvents: d.eventCount > 0,
           past: d.isPast,
           hasTournament: d.hasTournament,
+          hasPrerelease: d.hasPrerelease,
           hasShowdown: d.hasShowdown,
           hasPlanetary: d.hasPlanetary
         }"
@@ -72,6 +73,7 @@ const days = computed(() => {
       eventCount: dayEvents.length,
       isPast: d.isBefore(dayjs(), 'day'),
       hasTournament: dayEvents.some(e => e.type === 'tournament'),
+      hasPrerelease: dayEvents.some(e => e.type === 'prerelease'),
       hasShowdown: dayEvents.some(e => e.type === 'showdown'),
       hasPlanetary: dayEvents.some(e => e.type === 'planetary')
     })
@@ -183,15 +185,13 @@ onMounted(() => {
 }
 
 .day:hover {
-  background: #eee;
+  background: var(--border-light);
   transform: scale(1.15);
+  box-shadow: var(--shadow-logo-hover);
 }
 
 .day.active {
-  background: var(--primary-blue) !important;
-  color: white;
-  border: 1px solid var(--primary-blue) !important;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--primary-blue) !important;
 }
 
 .day.weekend {
@@ -200,14 +200,17 @@ onMounted(() => {
 }
 
 .day.weekend.active {
-  background: var(--primary-blue);
-  color: white;
+  border: 2px solid var(--primary-blue) !important;
 }
 
 .day.today {
-  background-color: var(--hover-green) !important;
-  color: var(--text-primary) !important;
-  border: 2px solid var(--border-today) !important;
+  background-color: var(--primary-blue) !important;
+  color: #1a1a1a !important;
+  border: 1px solid var(--primary-blue) !important;
+}
+
+.day.today .count {
+  color: #1a1a1a;
 }
 
 .day.today.active {
@@ -247,6 +250,15 @@ onMounted(() => {
   color: var(--border-tournament);
 }
 
+.day.hasPrerelease {
+  background-color: var(--bg-prerelease-day) !important;
+  border: 1px solid var(--border-prerelease) !important;
+}
+
+.day.hasPrerelease .count {
+  color: var(--border-prerelease);
+}
+
 .day.hasShowdown {
   background-color: var(--bg-showdown-day) !important;
   border: 1px solid var(--border-showdown) !important;
@@ -267,6 +279,7 @@ onMounted(() => {
 }
 
 .day.hasTournament.active .count,
+.day.hasPrerelease.active .count,
 .day.hasShowdown.active .count,
 .day.hasPlanetary.active .count {
   color: white;

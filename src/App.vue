@@ -85,67 +85,71 @@ onUnmounted(() => {
 
 <style>
 :root {
-  /* Primární barvy */
-  --primary-blue: #007bff;
-  --hover-green: #90ee90;
+  /* Primární barvy – Star Wars theme */
+  --primary-blue: #FFE81F;           /* Star Wars zlatá */
+  --hover-green: rgba(75, 213, 238, 0.15); /* hologram cyan - subtle */
 
   /* Barvy typů akcí */
-  --type-weekly: #007bff;
-  --type-showdown: #20c997;
-  --type-prerelease: #ffc107;
-  --type-planetary: #303030;
-  --type-tournament: #6f42c1;
+  --type-weekly: #4A90D9;            /* modrý lightsaber */
+  --type-showdown: #5CB85C;          /* zelený lightsaber */
+  --type-prerelease: #FF8C00;        /* oranžová */
+  --type-planetary: #E05030;         /* Sith red */
+  --type-tournament: #C850C0;        /* purpurový lightsaber */
 
   /* Pozadí */
-  --bg-panel: #f9f9f9;
-  --bg-filters: #f0f4f8;
-  --bg-timeline: #fafafa;
-  --bg-card: white;
-  --bg-weekend: #fff3cd;
-  --bg-error: #fff5f5;
-  --bg-button: #e3f2fd;
-  --bg-showdown-day: #d4edda;
-  --bg-tournament-day: #e8d5f5;
-  --bg-description: rgba(0, 123, 255, 0.08);
+  --bg-panel: #0d1117;              /* tmavý vesmír */
+  --bg-filters: #161b22;            /* tmavší panel */
+  --bg-timeline: #0d1117;           /* tmavý vesmír */
+  --bg-card: #1c2333;               /* karta */
+  --bg-weekend: #2a1f00;            /* tmavá zlatá */
+  --bg-error: #3d1111;              /* tmavá červená */
+  --bg-button: #1a2744;             /* tlačítko */
+  --bg-showdown-day: #1a2e1a;       /* tmavá zelená */
+  --bg-prerelease-day: #5c2800;     /* výrazná oranžová */
+  --bg-tournament-day: #2a1a3e;     /* tmavá purpurová */
+  --bg-description: rgba(255, 232, 31, 0.08); /* zlatý nádech */
 
   /* Text */
-  --text-primary: #333;
-  --text-secondary: #666;
-  --text-tertiary: #777;
-  --text-dark: #222;
-  --text-muted: #999;
-  --text-location: #555;
-  --text-link: #0066cc;
-  --text-error: #dc3545;
+  --text-primary: #e6e6e6;          /* světlý text */
+  --text-secondary: #a0a0a0;        /* šedý text */
+  --text-tertiary: #888;            /* tlumený */
+  --text-dark: #f0f0f0;             /* nejsvětlejší */
+  --text-muted: #666;               /* hodně tlumený */
+  --text-location: #b0b0b0;         /* lokace */
+  --text-link: #4BD5EE;             /* cyan odkaz */
+  --text-error: #ff6b6b;            /* červená chyba */
 
   /* Okraje */
-  --border-light: #ddd;
-  --border-filter: #d0d8e0;
-  --border-divider: #e0e0e0;
-  --border-weekend: #ffc107;
-  --border-button: #90caf9;
-  --border-showdown: #28a745;
-  --border-today: #7bc87b;
-  --border-tournament: #9c27b0;
+  --border-light: #2a2a3a;          /* jemný okraj */
+  --border-filter: #2a3040;         /* filtr okraj */
+  --border-divider: #1e2530;        /* dělič */
+  --border-weekend: #665500;        /* víkend */
+  --border-button: #3a5080;         /* tlačítko */
+  --border-prerelease: #cc7000;     /* oranžová */
+  --border-showdown: #3a7a3a;       /* zelená */
+  --border-today: #4BD5EE;          /* cyan dnes */
+  --border-tournament: #8a3a9a;     /* purpurová */
 
   /* Mapa */
-  --marker-default: #cccccc;
-  --marker-location: #4285F4;
+  --marker-default: #555;
+  --marker-location: #4BD5EE;
 
   /* Stíny */
-  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --shadow-selected: 0 4px 12px rgba(0, 123, 255, 0.3);
-  --shadow-logo: 0 2px 8px rgba(0, 0, 0, 0.12);
-  --shadow-logo-hover: 0 4px 12px rgba(0, 0, 0, 0.18);
-  --shadow-thumb: 0 2px 4px rgba(0, 0, 0, 0.2);
-  --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-selected: 0 4px 16px rgba(255, 232, 31, 0.3);
+  --shadow-logo: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-logo-hover: 0 4px 12px rgba(255, 232, 31, 0.3);
+  --shadow-thumb: 0 2px 4px rgba(0, 0, 0, 0.5);
+  --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 html, body, #app {
   margin: 0;
   height: 100%;
   font-family: system-ui, sans-serif;
+  background: var(--bg-panel);
+  color: var(--text-primary);
 }
 
 /* Desktop layout */
