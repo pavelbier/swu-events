@@ -129,7 +129,7 @@ const getEventOpacity = (event) => {
 <style scoped>
 .panel {
   padding: 16px;
-  background: #f9f9f9;
+  background: var(--bg-panel);
   height: 100%;
   overflow-y: auto;
   box-sizing: border-box;
@@ -141,7 +141,7 @@ const getEventOpacity = (event) => {
 h3 {
   margin: 0 0 12px 0;
   font-size: 1.2em;
-  color: #333;
+  color: var(--text-primary);
   font-weight: 600;
   flex-shrink: 0;
 }
@@ -149,22 +149,22 @@ h3 {
 .no-events {
   padding: 20px;
   text-align: center;
-  color: #777;
+  color: var(--text-tertiary);
   font-style: italic;
 }
 
 .loading {
   padding: 40px 20px;
   text-align: center;
-  color: #007bff;
+  color: var(--primary-blue);
   font-weight: 500;
 }
 
 .error {
   padding: 20px;
   text-align: center;
-  color: #dc3545;
-  background: #fff5f5;
+  color: var(--text-error);
+  background: var(--bg-error);
   border-radius: 8px;
   margin: 10px;
 }
@@ -172,7 +172,7 @@ h3 {
 .error button {
   margin-top: 10px;
   padding: 8px 16px;
-  background: #007bff;
+  background: var(--primary-blue);
   color: white;
   border: none;
   border-radius: 6px;
@@ -187,7 +187,7 @@ h3 {
   margin-top: 48px;
   padding: 8px 0;
   font-size: 0.9em;
-  color: #666;
+  color: var(--text-secondary);
   font-weight: 500;
   text-transform: uppercase;
   opacity: 0.8;
@@ -198,18 +198,18 @@ h3 {
 }
 
 .event-card {
-  background: white;
+  background: var(--bg-card);
   border-radius: 12px;
   padding: 12px 14px;
   margin-bottom: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-card);
   transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
   cursor: pointer;
 }
 
 .event-card.on-selected-day {
-  background: white;
-  box-shadow: inset 0 0 0 3px var(--primary-blue), 0 2px 6px rgba(0,0,0,0.08);
+  background: var(--bg-card);
+  box-shadow: inset 0 0 0 3px var(--primary-blue), var(--shadow-card);
 }
 
 .event-card.on-selected-day .title {
@@ -218,7 +218,7 @@ h3 {
 
 .event-card.selected {
   border: 2px solid var(--primary-blue);
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  box-shadow: var(--shadow-selected);
 }
 
 .event-card.hovered {
@@ -227,7 +227,7 @@ h3 {
 
 .event-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-card-hover);
   opacity: 1 !important;
 }
 
@@ -240,7 +240,7 @@ h3 {
 
 .title {
   font-weight: 600;
-  color: #222;
+  color: var(--text-dark);
   font-size: 1.1em;
 }
 
@@ -256,15 +256,14 @@ h3 {
 
 .event-description {
   font-size: 0.85em;
-  color: #666;
+  color: var(--text-secondary);
   font-style: italic;
   margin: 4px 0 6px 0;
   padding: 4px 8px;
-  background: rgba(0, 123, 255, 0.08);
+  background: var(--bg-description);
   border-radius: 4px;
   border-left: 3px solid var(--primary-blue);
 }
-
 
 .event-url {
   margin: 6px 0;
@@ -272,7 +271,7 @@ h3 {
 
 .event-url a {
   font-size: 0.8em;
-  color: #0066cc;
+  color: var(--text-link);
   text-decoration: none;
   word-break: break-all;
 }
@@ -283,30 +282,29 @@ h3 {
 
 .distance {
   font-size: 0.9em;
-  color: #555;
+  color: var(--text-location);
 }
 
-/* barevné typy – příklad, můžeš přidat další */
-.type.weekly { background-color: #007bff; }
-.type.showdown { background-color: #20c997; }
-.type.prerelease { background-color: #ffc107; color: #333; }
-.type.planetary { background-color: #303030; }
-.type.tournament { background-color: #6f42c1; }
+.type.weekly { background-color: var(--type-weekly); }
+.type.showdown { background-color: var(--type-showdown); }
+.type.prerelease { background-color: var(--type-prerelease); color: var(--text-primary); }
+.type.planetary { background-color: var(--type-planetary); }
+.type.tournament { background-color: var(--type-tournament); }
 
 .location {
   font-size: 0.95em;
-  color: #555;
+  color: var(--text-location);
   margin-bottom: 4px;
 }
 
 .time {
   font-size: 0.95em;
-  color: #999;
+  color: var(--text-muted);
 }
 
 .days-from-now {
   font-size: 0.9em;
-  color: #666;
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
@@ -315,7 +313,7 @@ h3 {
     padding: 8px;
     padding-bottom: 40px;
     overflow-y: auto;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--border-light);
   }
 
   h3 {

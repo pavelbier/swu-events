@@ -61,23 +61,23 @@ const toggleType = (type) => {
 <style scoped>
 .filters-container {
   padding: 12px 14px;
-  background: #f0f4f8;
+  background: var(--bg-filters);
   border-radius: 8px;
-  border: 1px solid #d0d8e0;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-filter);
+  box-shadow: var(--shadow-inset);
 }
 
 .type-filter {
   margin-bottom: 14px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #d0d8e0;
+  border-bottom: 1px solid var(--border-filter);
 }
 
 .type-filter > label {
   display: block;
   font-size: 0.9em;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -107,7 +107,7 @@ const toggleType = (type) => {
   font-weight: 600;
   padding: 4px 8px;
   border-radius: 12px;
-  color: #333;
+  color: var(--text-primary);
   background-color: #e8e8e8;
   text-transform: uppercase;
   display: inline-flex;
@@ -120,17 +120,17 @@ const toggleType = (type) => {
   color: white;
 }
 
-.type-label.weekly:has(input:checked) { background-color: #007bff; }
-.type-label.showdown:has(input:checked) { background-color: #20c997; }
-.type-label.prerelease:has(input:checked) { background-color: #ffc107; color: #333; }
-.type-label.planetary:has(input:checked) { background-color: #303030; }
-.type-label.tournament:has(input:checked) { background-color: #6f42c1; }
+.type-label.weekly:has(input:checked) { background-color: var(--type-weekly); }
+.type-label.showdown:has(input:checked) { background-color: var(--type-showdown); }
+.type-label.prerelease:has(input:checked) { background-color: var(--type-prerelease); color: var(--text-primary); }
+.type-label.planetary:has(input:checked) { background-color: var(--type-planetary); }
+.type-label.tournament:has(input:checked) { background-color: var(--type-tournament); }
 
 .distance-slider-container label {
   display: block;
   font-size: 0.9em;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -140,7 +140,7 @@ const toggleType = (type) => {
   width: 100%;
   height: 6px;
   border-radius: 3px;
-  background: #ddd;
+  background: var(--border-light);
   outline: none;
   -webkit-appearance: none;
   appearance: none;
@@ -155,7 +155,7 @@ const toggleType = (type) => {
   border-radius: 50%;
   background: var(--primary-blue);
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-thumb);
 }
 
 .distance-slider::-moz-range-thumb {
@@ -164,7 +164,7 @@ const toggleType = (type) => {
   border-radius: 50%;
   background: var(--primary-blue);
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-thumb);
   border: none;
 }
 
@@ -172,7 +172,7 @@ const toggleType = (type) => {
   display: flex;
   justify-content: space-between;
   font-size: 0.75em;
-  color: #999;
+  color: var(--text-muted);
   margin-top: 6px;
 }
 
@@ -191,7 +191,7 @@ const toggleType = (type) => {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none;
-    border-right: 1px solid #d0d8e0;
+    border-right: 1px solid var(--border-filter);
     padding-right: 16px;
   }
 

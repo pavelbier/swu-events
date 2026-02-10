@@ -116,8 +116,8 @@ onMounted(() => {
 <style scoped>
 .timeline-wrapper {
   padding: 6px;
-  background: #fafafa;
-  border-top: 1px solid #e0e0e0;
+  background: var(--bg-timeline);
+  border-top: 1px solid var(--border-divider);
   box-sizing: border-box;
 }
 
@@ -137,9 +137,9 @@ onMounted(() => {
 }
 
 .month-controls button {
-  border: 1px solid #90caf9;
-  background-color: #e3f2fd;
-  color: #333;
+  border: 1px solid var(--border-button);
+  background-color: var(--bg-button);
+  color: var(--text-primary);
   border-radius: 8px;
   padding: 4px 8px;
   cursor: pointer;
@@ -147,7 +147,7 @@ onMounted(() => {
 }
 
 .month-controls button:hover {
-  background-color: #90caf9;
+  background-color: var(--border-button);
   color: white;
 }
 
@@ -168,7 +168,6 @@ onMounted(() => {
   .timeline {
     justify-content: flex-start;
   }
-  
 }
 
 .day {
@@ -196,8 +195,8 @@ onMounted(() => {
 }
 
 .day.weekend {
-  background-color: #fff3cd;
-  border-color: #ffc107;
+  background-color: var(--bg-weekend);
+  border-color: var(--border-weekend);
 }
 
 .day.weekend.active {
@@ -207,8 +206,8 @@ onMounted(() => {
 
 .day.today {
   background-color: var(--hover-green) !important;
-  color: #333 !important;
-  border: 2px solid #7bc87b !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--border-today) !important;
 }
 
 .day.today.active {
@@ -235,36 +234,36 @@ onMounted(() => {
 }
 
 .day.hasEvents {
-  background-color: #e3f2fd;
-  border: 1px solid #90caf9;
+  background-color: var(--bg-button);
+  border: 1px solid var(--border-button);
 }
 
 .day.hasTournament {
-  background-color: #e8d5f5 !important;
-  border: 1px solid #9c27b0 !important;
+  background-color: var(--bg-tournament-day) !important;
+  border: 1px solid var(--border-tournament) !important;
 }
 
 .day.hasTournament .count {
-  color: #9c27b0;
+  color: var(--border-tournament);
 }
 
 .day.hasShowdown {
-  background-color: #d4edda !important;
-  border: 1px solid #28a745 !important;
+  background-color: var(--bg-showdown-day) !important;
+  border: 1px solid var(--border-showdown) !important;
 }
 
 .day.hasShowdown .count {
-  color: #28a745;
+  color: var(--border-showdown);
 }
 
 .day.hasPlanetary {
-  background-color: #303030 !important;
+  background-color: var(--type-planetary) !important;
   color: white !important;
-  border: 1px solid #303030 !important;
+  border: 1px solid var(--type-planetary) !important;
 }
 
 .day.hasPlanetary .count {
-  color: #ffc107;
+  color: var(--type-prerelease);
 }
 
 .day.hasTournament.active .count,

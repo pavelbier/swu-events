@@ -85,8 +85,61 @@ onUnmounted(() => {
 
 <style>
 :root {
+  /* Primární barvy */
   --primary-blue: #007bff;
   --hover-green: #90ee90;
+
+  /* Barvy typů akcí */
+  --type-weekly: #007bff;
+  --type-showdown: #20c997;
+  --type-prerelease: #ffc107;
+  --type-planetary: #303030;
+  --type-tournament: #6f42c1;
+
+  /* Pozadí */
+  --bg-panel: #f9f9f9;
+  --bg-filters: #f0f4f8;
+  --bg-timeline: #fafafa;
+  --bg-card: white;
+  --bg-weekend: #fff3cd;
+  --bg-error: #fff5f5;
+  --bg-button: #e3f2fd;
+  --bg-showdown-day: #d4edda;
+  --bg-tournament-day: #e8d5f5;
+  --bg-description: rgba(0, 123, 255, 0.08);
+
+  /* Text */
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-tertiary: #777;
+  --text-dark: #222;
+  --text-muted: #999;
+  --text-location: #555;
+  --text-link: #0066cc;
+  --text-error: #dc3545;
+
+  /* Okraje */
+  --border-light: #ddd;
+  --border-filter: #d0d8e0;
+  --border-divider: #e0e0e0;
+  --border-weekend: #ffc107;
+  --border-button: #90caf9;
+  --border-showdown: #28a745;
+  --border-today: #7bc87b;
+  --border-tournament: #9c27b0;
+
+  /* Mapa */
+  --marker-default: #cccccc;
+  --marker-location: #4285F4;
+
+  /* Stíny */
+  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-selected: 0 4px 12px rgba(0, 123, 255, 0.3);
+  --shadow-logo: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-logo-hover: 0 4px 12px rgba(0, 0, 0, 0.18);
+  --shadow-thumb: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-inset: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 html, body, #app {
@@ -100,7 +153,7 @@ html, body, #app {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 6px var(--panel-width, 380px);
-  grid-template-rows: 1fr auto 100px;
+  grid-template-rows: 1fr auto 130px;
   grid-template-areas:
     "map divider panel"
     "map divider filters"
@@ -113,14 +166,14 @@ html, body, #app {
 
 .divider {
   grid-area: divider;
-  background: #e0e0e0;
+  background: var(--border-divider);
   cursor: col-resize;
   transition: background 0.2s;
   z-index: 100;
 }
 
 .divider:hover {
-  background: #007bff;
+  background: var(--primary-blue);
 }
 
 .panel-area {
@@ -134,8 +187,8 @@ html, body, #app {
 .filters-area {
   grid-area: filters;
   padding: 8px 16px;
-  background: #f9f9f9;
-  border-top: 1px solid #ddd;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-light);
 }
 
 .timeline-area {
@@ -176,7 +229,7 @@ html, body, #app {
     align-self: end;
     width: 100vw;
     height: 60px;
-    background: linear-gradient(to bottom, transparent 0%, #f9f9f9 100%);
+    background: linear-gradient(to bottom, transparent 0%, var(--bg-panel) 100%);
     pointer-events: none;
     z-index: 10;
   }
@@ -185,8 +238,8 @@ html, body, #app {
     width: 100vw;
     padding: 8px 12px;
     box-sizing: border-box;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
   }
 
   .timeline-area {

@@ -17,8 +17,8 @@
       <LCircle
         :lat-lng="[store.mapCenter.lat, store.mapCenter.lng]"
         :radius="store.maxDistance * 1000"
-        :color="'#007bff'"
-        :fillColor="'#007bff'"
+        :color="COLORS.primary"
+        :fillColor="COLORS.primary"
         :fillOpacity="0.05"
         :opacity="0.2"
         :weight="1"
@@ -86,6 +86,14 @@ import dayjs from '@/dayjs'
 
 const store = useEventsStore()
 
+// Barvy pro Leaflet komponenty (musí být JS hodnoty, ne CSS proměnné)
+const COLORS = {
+  primary: '#007bff',
+  markerDefault: '#cccccc',
+  markerHover: '#90ee90',
+  location: '#4285F4'
+}
+
 // Vypočítat zoom tak, aby kruh byl vidět
 const calculatedZoom = computed(() => {
   const distanceKm = store.maxDistance
@@ -113,9 +121,9 @@ const createMarkerIcon = (color) => L.icon({
   popupAnchor: [1, -34]
 })
 
-const whiteIcon = createMarkerIcon('#cccccc')
-const blueIcon = createMarkerIcon('#007bff')
-const greenIcon = createMarkerIcon('#90ee90')
+const whiteIcon = createMarkerIcon(COLORS.markerDefault)
+const blueIcon = createMarkerIcon(COLORS.primary)
+const greenIcon = createMarkerIcon(COLORS.markerHover)
 
 // Vrátí modrou ikonu pro dnešní události, jinak bílou
 const getEventIcon = (event) => {
@@ -128,8 +136,8 @@ const getEventIcon = (event) => {
 const currentLocationIcon = L.icon({
   iconUrl: `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="11" fill="#4285F4" opacity="0.3"/>
-      <circle cx="12" cy="12" r="7" fill="#4285F4"/>
+      <circle cx="12" cy="12" r="11" fill="${COLORS.location}" opacity="0.3"/>
+      <circle cx="12" cy="12" r="7" fill="${COLORS.location}"/>
       <circle cx="12" cy="12" r="3" fill="white"/>
     </svg>
   `)}`,
@@ -194,17 +202,17 @@ onMounted(() => {
   z-index: 1000;
   font-size: 18px;
   font-weight: 700;
-  color: #333;
-  background: white;
+  color: var(--text-primary);
+  background: var(--bg-card);
   padding: 8px 12px;
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  box-shadow: var(--shadow-logo);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .logo:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  box-shadow: var(--shadow-logo-hover);
   transform: translateY(-1px);
 }
 </style>
