@@ -119,15 +119,11 @@ onMounted(() => {
   background: #fafafa;
   border-top: 1px solid #e0e0e0;
   box-sizing: border-box;
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
 }
 
 @media (max-width: 768px) {
   .timeline-wrapper {
-    flex: 0 0 120px;
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    padding: 4px;
   }
 }
 

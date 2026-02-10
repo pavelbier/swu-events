@@ -2,7 +2,7 @@
   <div class="map">
     <div class="logo" @click="resetToToday">SWU Events</div>
     <LMap
-      :zoom="store.zoom"
+      :zoom="calculatedZoom"
       :center="[store.mapCenter.lat, store.mapCenter.lng]"
       style="height: 100%; width: 100%"
       @update:center="onMove"
@@ -78,13 +78,27 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, computed } from 'vue'
 import { useEventsStore } from '@/stores/eventsStore'
 import { LMap, LTileLayer, LMarker, LPopup, LCircle } from '@vue-leaflet/vue-leaflet'
 import L from 'leaflet'
 import dayjs from '@/dayjs'
 
 const store = useEventsStore()
+
+// Vypočítat zoom tak, aby kruh byl vidět
+const calculatedZoom = computed(() => {
+  const distanceKm = store.maxDistance
+  const isMobile = window.innerWidth <= 768
+
+  // Mobil má 16:9 poměr (menší výška), potřebuje více oddálit
+  // Desktop má více prostoru, může být přiblíženo
+  const baseZoom = isMobile ? 7 : 8
+  const baseDistance = isMobile ? 100 : 150
+
+  const zoom = baseZoom - Math.log2(distanceKm / baseDistance)
+  return Math.max(4, Math.min(11, Math.round(zoom)))
+})
 
 // Vytvoření vlastních ikon
 const createMarkerIcon = (color) => L.icon({
@@ -164,14 +178,12 @@ onMounted(() => {
   height: 100%;
   width: 100%;
   position: relative;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
 }
 
 @media (max-width: 768px) {
   .map {
-    flex: 1;
-    min-height: 0;
+    height: 100%;
+    width: 100%;
   }
 }
 
