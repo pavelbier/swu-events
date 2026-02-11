@@ -16,5 +16,18 @@
       "lat": 50.023831637256066,
       "lng": 15.201706052774712
     }
+  },
+  {
+    "title": "Prevko LAW v Kolíně 5.3.",
+    "type": "prerelease",
+    "dateFrom": "2026-03-05T17:30",
+    "dateTo": "2026-03-05T22:00",
+    "location": {
+      "city": "Kolín",
+      "place": "KODEK",
+      "lat": 50.023831637256066,
+      "lng": 15.201706052774712
+    },
+    "url":"https://www.facebook.com/groups/681955643652055/permalink/1205508427963438/"
   }
 ]
