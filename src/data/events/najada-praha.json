@@ -15,5 +15,19 @@
       "lat": 50.07952566299952,
       "lng": 14.450206803230738
     }
+  },
+  {
+    "title": "Pre-release LAW - Najada",
+    "type": "prerelease",
+    "dateFrom": "2026-03-06T17:30",
+    "dateTo": "2026-03-06T22:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url":"https://melee.gg/Tournament/View/403539"
   }
+  
 ]
