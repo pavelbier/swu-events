@@ -28,5 +28,18 @@
       "lng": 14.082533916164772
     },
     "url": "https://melee.gg/Tournament/View/398135"
+  },
+  {
+    "title": "Double Pre-Release: SWU A Lawless Time",
+    "type": "showdown",
+    "dateFrom": "2026-03-07T10:30",
+    "dateTo": "2026-03-07T17:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://dragon-world.store/produkt/vstupenka-double-pre-release-swu-a-lawless-time/"
   }
 ]
