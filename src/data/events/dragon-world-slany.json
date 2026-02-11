@@ -31,7 +31,7 @@
   },
   {
     "title": "Double Pre-Release: SWU A Lawless Time",
-    "type": "showdown",
+    "type": "prerelease",
     "dateFrom": "2026-03-07T10:30",
     "dateTo": "2026-03-07T17:00",
     "location": {
