@@ -7,7 +7,7 @@
       "endDate": "2026-06-30T17:30",
       "frequency": "weekly",
       "duration": 3,
-      "excludeDates": []
+      "excludeDates": ["2026-03-06"]
     },
     "location": {
       "city": "Praha",
