@@ -17,7 +17,7 @@
     }
   },
   {
-    "title": "Pre-release LAW - Najada",
+    "title": "Pre-release LAW - Najada - pátek",
     "type": "prerelease",
     "dateFrom": "2026-03-06T17:30",
     "dateTo": "2026-03-06T22:00",
@@ -28,6 +28,19 @@
       "lng": 14.450206803230738
     },
     "url":"https://melee.gg/Tournament/View/403539"
+  },
+  {
+    "title": "Pre-release LAW - Najada - sobota",
+    "type": "prerelease",
+    "dateFrom": "2026-03-07T10:30",
+    "dateTo": "2026-03-07T15:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url":"https://melee.gg/Tournament/View/403533"
   }
   
 ]
