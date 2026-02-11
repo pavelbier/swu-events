@@ -15,5 +15,18 @@
       "lat": 50.07633494350315,
       "lng": 14.405838578144332
     }
+  },
+  {
+    "title": "Prerelease u Professora Onyxe",
+    "type": "prerelease",
+    "dateFrom": "2026-03-08T10:30",
+    "dateTo": "2026-03-08T18:00",
+    "location": {
+      "city": "Praha",
+      "place": "Professor Onyx",
+      "lat": 50.07633494350315,
+      "lng": 14.405838578144332
+    },
+    "url":"https://melee.gg/Tournament/View/404166"
   }
 ]
