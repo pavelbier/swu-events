@@ -7,7 +7,7 @@
       "endDate": "2026-06-25T21:00",
       "frequency": "weekly",
       "duration": 3,
-      "excludeDates": [],
+      "excludeDates": []
     },
     "location": {
       "city": "Hradec Králové",
