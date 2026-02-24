@@ -1,0 +1,32 @@
+[
+  {
+    "title": "weekly Untap",
+    "type": "weekly",
+    "recurrence": {
+      "startDate": "2026-02-25T17:30",
+      "endDate": "2026-06-25T21:00",
+      "frequency": "weekly",
+      "duration": 3,
+      "excludeDates": [],
+    },
+    "location": {
+      "city": "Hradec Králové",
+      "place": "Untap",
+      "lat": 50.214513264991844, 
+      "lng": 15.845218377070807
+    }
+  },
+  {
+    "title": "Prerelease: A Lawless Time - Untap",
+    "type": "prerelease",
+    "dateFrom": "2026-03-07T11:00",
+    "dateTo": "2026-03-07T18:00",
+    "location": {
+      "city": "Hradec Králové",
+      "place": "Untap",
+      "lat": 50.214513264991844, 
+      "lng": 15.845218377070807
+    },
+    "url":"https://melee.gg/Tournament/View/399544"
+  }
+]
