@@ -1,5 +1,5 @@
 <template>
-  <div class="layout" :style="{ '--panel-width': panelWidth + 'px' }">
+  <div class="layout" :style="{ '--map-pct': mapPercent + '%' }">
     <MapView class="map-area" />
     <div
       class="divider"
@@ -26,19 +26,17 @@ const store = useEventsStore()
 // Načíst události z GitHubu při startu
 store.loadEvents()
 
-// Výchozí šířka panelu
-const DEFAULT_PANEL_WIDTH = 380
-const MIN_PANEL_WIDTH = 280
-const MAX_PANEL_WIDTH = 800
+// Šířka mapy v procentech (třetina až polovina)
+const MIN_MAP_PCT = 33.33
+const MAX_MAP_PCT = 50
+const DEFAULT_MAP_PCT = 33.33
 
-// Načíst z localStorage nebo použít výchozí
-const savedWidth = localStorage.getItem('panelWidth')
-const panelWidth = ref(savedWidth ? parseInt(savedWidth, 10) : DEFAULT_PANEL_WIDTH)
+const savedPct = localStorage.getItem('mapPercent')
+const mapPercent = ref(savedPct ? parseFloat(savedPct) : DEFAULT_MAP_PCT)
 
 let isResizing = false
 
 const startResize = (e) => {
-  // Pouze na širších obrazovkách
   if (window.innerWidth <= 768) return
 
   isResizing = true
@@ -52,10 +50,10 @@ const doResize = (e) => {
   if (!isResizing) return
 
   const clientX = e.touches ? e.touches[0].clientX : e.clientX
-  const newWidth = window.innerWidth - clientX
+  const pct = (clientX / window.innerWidth) * 100
 
-  if (newWidth >= MIN_PANEL_WIDTH && newWidth <= MAX_PANEL_WIDTH) {
-    panelWidth.value = newWidth
+  if (pct >= MIN_MAP_PCT && pct <= MAX_MAP_PCT) {
+    mapPercent.value = pct
   }
 }
 
@@ -64,7 +62,7 @@ const stopResize = () => {
     isResizing = false
     document.body.style.cursor = ''
     document.body.style.userSelect = ''
-    localStorage.setItem('panelWidth', panelWidth.value.toString())
+    localStorage.setItem('mapPercent', mapPercent.value.toString())
   }
 }
 
@@ -156,7 +154,7 @@ html, body, #app {
 .layout {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 6px var(--panel-width, 380px);
+  grid-template-columns: var(--map-pct, 33.33%) 6px 1fr;
   grid-template-rows: 1fr auto 130px;
   grid-template-areas:
     "map divider panel"

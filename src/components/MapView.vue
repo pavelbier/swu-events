@@ -1,7 +1,8 @@
 <template>
-  <div class="map">
+  <div class="map" ref="mapContainer">
     <div class="logo" @click="resetToToday">SWU Events</div>
     <LMap
+      ref="leafletMap"
       :zoom="calculatedZoom"
       :center="[store.mapCenter.lat, store.mapCenter.lng]"
       style="height: 100%; width: 100%"
@@ -78,13 +79,17 @@
 </template>
 
 <script setup>
-import { onMounted, computed } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useEventsStore } from '@/stores/eventsStore'
 import { LMap, LTileLayer, LMarker, LPopup, LCircle } from '@vue-leaflet/vue-leaflet'
 import L from 'leaflet'
 import dayjs from '@/dayjs'
 
 const store = useEventsStore()
+
+const mapContainer = ref(null)
+const leafletMap = ref(null)
+let resizeObserver = null
 
 // Barvy pro Leaflet komponenty (musí být JS hodnoty, ne CSS proměnné)
 const COLORS = {
@@ -166,18 +171,27 @@ onMounted(() => {
   if (!hasUrlPosition && navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        // Úspěch - nastav aktuální pozici
         store.setMapCenter({
           lat: position.coords.latitude,
           lng: position.coords.longitude
         })
       },
-      (error) => {
-        // Selhání - zůstane fallback na střed ČR
+      () => {
         console.log('Geolokace není dostupná nebo byla zakázána')
       }
     )
   }
+
+  // Překreslit mapu při změně velikosti kontejneru (resize divider)
+  resizeObserver = new ResizeObserver(() => {
+    const map = leafletMap.value?.leafletObject
+    if (map) map.invalidateSize()
+  })
+  if (mapContainer.value) resizeObserver.observe(mapContainer.value)
+})
+
+onUnmounted(() => {
+  if (resizeObserver) resizeObserver.disconnect()
 })
 </script>
 
