@@ -211,7 +211,8 @@ export const useEventsStore = defineStore('events', {
       maxDistance,
       selectedTypes,
       selectedEvent: null,
-      hoveredEvent: null
+      hoveredEvent: null,
+      maxDisplayEvents: 5
     }
   },
 
@@ -243,16 +244,17 @@ export const useEventsStore = defineStore('events', {
 
     displayedEvents(state) {
       const filtered = this.filteredEvents
+      const max = state.maxDisplayEvents
 
-      // Pokud máme 5 nebo více akcí na daný den, vrátit je
-      if (filtered.length >= 5) {
+      // Pokud máme dost akcí na daný den, vrátit je
+      if (filtered.length >= max) {
         return filtered
       }
 
-      // Pokud máme méně než 5 akcí, doplnit nejbližšími akcemi do 5
+      // Doplnit nejbližšími akcemi do maxDisplayEvents
       let result = [...filtered]
-      
-      if (result.length < 5) {
+
+      if (result.length < max) {
         const nearestEvents = state.events
           .filter(e => {
             const dist = distance(
@@ -275,8 +277,8 @@ export const useEventsStore = defineStore('events', {
             daysFromNow: dayjs(e.dateFrom).diff(dayjs(state.selectedDate), 'day')
           }))
           .sort((a, b) => Math.abs(a.daysFromNow) - Math.abs(b.daysFromNow))
-          .slice(0, 5 - result.length)
-        
+          .slice(0, max - result.length)
+
         result = [...result, ...nearestEvents]
       }
 

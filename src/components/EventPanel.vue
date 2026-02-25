@@ -151,6 +151,7 @@ h3 {
   text-align: center;
   color: var(--text-tertiary);
   font-style: italic;
+  grid-column: 1 / -1;
 }
 
 .loading {
@@ -158,6 +159,7 @@ h3 {
   text-align: center;
   color: var(--primary-blue);
   font-weight: 500;
+  grid-column: 1 / -1;
 }
 
 .error {
@@ -167,6 +169,7 @@ h3 {
   background: var(--bg-error);
   border-radius: 8px;
   margin: 10px;
+  grid-column: 1 / -1;
 }
 
 .error button {
@@ -184,24 +187,28 @@ h3 {
 }
 
 .nearby-label {
-  margin-top: 48px;
+  margin-top: 36px;
   padding: 8px 0;
   font-size: 0.9em;
   color: var(--text-secondary);
   font-weight: 500;
   text-transform: uppercase;
   opacity: 0.8;
+  grid-column: 1 / -1;
 }
 
 .events-section {
   flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 400px));
+  gap: 12px;
+  align-content: start;
 }
 
 .event-card {
   background: var(--bg-card);
   border-radius: 12px;
   padding: 12px 14px;
-  margin-bottom: 12px;
   box-shadow: var(--shadow-card);
   transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
   cursor: pointer;
@@ -321,8 +328,12 @@ h3 {
     margin-bottom: 8px;
   }
 
+  .events-section {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
   .event-card {
-    margin-bottom: 8px;
     padding: 10px 12px;
   }
 }

@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 import MapView from '@/components/MapView.vue'
 import EventPanel from '@/components/EventPanel.vue'
 import EventFilters from '@/components/EventFilters.vue'
@@ -66,11 +66,38 @@ const stopResize = () => {
   }
 }
 
+// Dynamický výpočet kolik akcí se vejde na obrazovku
+const CARD_HEIGHT = 140   // výška karty + gap
+const CARD_WIDTH = 310    // min šířka sloupce (280 + gap)
+const PANEL_OVERHEAD = 230 // timeline 130 + filters ~50 + heading ~50
+
+const calcMaxEvents = () => {
+  const w = window.innerWidth
+  const h = window.innerHeight
+
+  if (w <= 768) {
+    // Mobil: panel zabírá zbytek pod mapou, odhadneme 5
+    store.maxDisplayEvents = 5
+    return
+  }
+
+  const panelWidth = w * (1 - mapPercent.value / 100) - 6
+  const cols = Math.max(1, Math.floor(panelWidth / CARD_WIDTH))
+  const rows = Math.max(1, Math.floor((h - PANEL_OVERHEAD) / CARD_HEIGHT))
+  store.maxDisplayEvents = Math.max(3, cols * rows)
+}
+
+watch(mapPercent, calcMaxEvents)
+
+const onWindowResize = () => calcMaxEvents()
+
 onMounted(() => {
   document.addEventListener('mousemove', doResize)
   document.addEventListener('mouseup', stopResize)
   document.addEventListener('touchmove', doResize)
   document.addEventListener('touchend', stopResize)
+  window.addEventListener('resize', onWindowResize)
+  calcMaxEvents()
 })
 
 onUnmounted(() => {
@@ -78,6 +105,7 @@ onUnmounted(() => {
   document.removeEventListener('mouseup', stopResize)
   document.removeEventListener('touchmove', doResize)
   document.removeEventListener('touchend', stopResize)
+  window.removeEventListener('resize', onWindowResize)
 })
 </script>
 
