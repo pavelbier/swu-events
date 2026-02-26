@@ -12,6 +12,14 @@
         "2026-02-05": {
           "title": "Weekly Hero - Rebelové vs Imperial",
           "url": "https://discord.com/channels/1266041085466247230/1326233087021023232/1466712332754489404"
+        },
+        "2026-03-19": {
+          "title": "HERO: SWU - Lawless Time Spotlight Deck Turnaj",
+          "url": "https://melee.gg/Tournament/View/404952"
+        },
+        "2026-03-26": {
+          "title": "Lawless Time Draft Turnaj",
+          "url": "https://melee.gg/Tournament/View/404954"
         }
       }
     },
@@ -32,6 +40,7 @@
       "place": "Hero Store",
       "lat": 49.191549141374594,
       "lng": 16.620843170945896
-    }
+    },
+    "url": "https://melee.gg/Tournament/View/404951"
   }
 ]
