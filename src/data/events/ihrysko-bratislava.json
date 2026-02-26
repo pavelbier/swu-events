@@ -63,5 +63,17 @@
       "lng": 17.034661179626276
     },
     "url":"https://melee.gg/Tournament/View/402634"
+  },
+  {
+    "title": "Planetary - iHRYsko store Bratislava - Limited",
+    "type": "planetary",
+    "dateFrom": "2026-05-16T09:00",
+    "dateTo": "2026-05-16T18:00",
+    "location": {
+      "city": "Bratislava",
+      "place": "iHRYsko store",
+      "lat": 48.16823106987522,
+      "lng": 17.138407074479147
+    }
   }
 ]
