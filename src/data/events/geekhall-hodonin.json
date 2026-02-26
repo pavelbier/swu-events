@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Planetary Qualifier",
+    "type": "planetary",
+    "dateFrom": "2026-06-07T10:00",
+    "dateTo": "2026-06-07T22:00",
+    "location": {
+      "city": "Hodonín",
+      "place": "GeekHall",
+      "lat": 48.851099590125926, 
+      "lng": 17.127556078531782
+    },
+    "url":"https://starwarsunlimited.com/planetary-qualifiers#:~:text=June%207%2C%202026-,GeekHall,-Premier"
+  }
+  
+]
