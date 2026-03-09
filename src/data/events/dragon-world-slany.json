@@ -41,5 +41,19 @@
       "lng": 14.082533916164772
     },
     "url": "https://dragon-world.store/produkt/vstupenka-double-pre-release-swu-a-lawless-time/"
-  }
+  },
+  {
+    "title": "Dragon World Store Showdown - LAW",
+    "type": "showdown",
+    "dateFrom": "2026-04-19T10:30",
+    "dateTo": "2026-04-19T17:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://dragon-world.store/produkt/vstupenka-sw-u-store-showdown-a-lawless-time/"
+  },
+  
 ]
