@@ -54,6 +54,18 @@
       "lng": 14.450206803230738
     },
     "url":"https://starwarsunlimited.com/planetary-qualifiers#:~:text=May%209%2C%202026-,Najada%20Games,-Premier"
+  },
+  {
+    "title": "A Lawless Time: Store Showdown - Sealed",
+    "type": "showdown",
+    "dateFrom": "2026-04-05T10:30",
+    "dateTo": "2026-04-05T18:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url": "https://melee.gg/Tournament/View/415913"
   }
-  
 ]
