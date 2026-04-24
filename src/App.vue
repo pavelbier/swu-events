@@ -121,6 +121,8 @@ onUnmounted(() => {
   --type-prerelease: #FF8C00;        /* oranžová */
   --type-planetary: #E05030;         /* Sith red */
   --type-tournament: #C850C0;        /* purpurový lightsaber */
+  --type-sector: #878664;            /* sector  */
+  --type-regional: #f600e5;          /* regional */
 
   /* Pozadí */
   --bg-panel: #0d1117;              /* tmavý vesmír */
@@ -155,6 +157,8 @@ onUnmounted(() => {
   --border-showdown: #3a7a3a;       /* zelená */
   --border-today: #4BD5EE;          /* cyan dnes */
   --border-tournament: #8a3a9a;     /* purpurová */
+  --border-regional: #111d11;       /* regional */
+  --border-sector: #0f440f;         /* sector */
 
   /* Mapa */
   --marker-default: #555;

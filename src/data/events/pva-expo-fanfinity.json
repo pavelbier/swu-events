@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Regional Championship - PVA EXPO",
+    "type": "regional",
+    "dateFrom": "2026-05-22T08:00",
+    "dateTo": "2026-05-24T22:00",
+    "location": {
+      "city": "Praha",
+      "place": "PVA EXPO",
+      "lat": 50.12965411922596, 
+      "lng": 14.51559344174931
+    },
+    "url": "https://www.fanfinity.gg/event/star-wars-unlimited-regional-championship-prague/"
+  }
+]

@@ -36,7 +36,7 @@ function updateUrl(state) {
   }
 
   // Typy přidej jen pokud nejsou výchozí
-  const defaultTypes = ['weekly', 'showdown', 'prerelease', 'tournament']
+  const defaultTypes = ['weekly', 'showdown', 'prerelease', 'tournament', 'sector', 'regional']
   const typesChanged = state.selectedTypes.length !== defaultTypes.length ||
     !state.selectedTypes.every(t => defaultTypes.includes(t))
   if (typesChanged) {
@@ -188,7 +188,7 @@ export const useEventsStore = defineStore('events', {
 
     // Typy: URL > localStorage > default
     const savedTypes = localStorage.getItem('selectedTypes')
-    const defaultTypes = ['weekly', 'showdown', 'prerelease', 'tournament']
+    const defaultTypes = ['weekly', 'showdown', 'prerelease', 'tournament', 'sector', 'regional']
     const selectedTypes = urlParams.types
       ? urlParams.types.split(',').filter(t => t)
       : (savedTypes ? JSON.parse(savedTypes) : defaultTypes)

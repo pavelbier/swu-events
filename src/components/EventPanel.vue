@@ -96,7 +96,9 @@ const typeLabels = {
   'showdown': 'showdown',
   'prerelease': 'prerelease',
   'planetary': 'planetary',
-  'tournament': 'turnaj'
+  'tournament': 'turnaj',
+  'sector': 'sector',
+  'regional': 'regional'
 }
 
 const getTypeLabel = (type) => typeLabels[type] || type
@@ -297,6 +299,8 @@ h3 {
 .type.prerelease { background-color: var(--type-prerelease); color: #1a1a1a; }
 .type.planetary { background-color: var(--type-planetary); }
 .type.tournament { background-color: var(--type-tournament); }
+.type.sector { background-color: var(--type-sector); }
+.type.regional { background-color: var(--type-regional); }
 
 .location {
   font-size: 0.95em;

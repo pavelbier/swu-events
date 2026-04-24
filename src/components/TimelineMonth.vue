@@ -21,7 +21,9 @@
           hasTournament: d.hasTournament,
           hasPrerelease: d.hasPrerelease,
           hasShowdown: d.hasShowdown,
-          hasPlanetary: d.hasPlanetary
+          hasPlanetary: d.hasPlanetary,
+          hasRegional: d.hasRegional,
+          hasSector: d.hasSector
         }"
         @click="store.setDate(d.date)"
       >
@@ -75,7 +77,9 @@ const days = computed(() => {
       hasTournament: dayEvents.some(e => e.type === 'tournament'),
       hasPrerelease: dayEvents.some(e => e.type === 'prerelease'),
       hasShowdown: dayEvents.some(e => e.type === 'showdown'),
-      hasPlanetary: dayEvents.some(e => e.type === 'planetary')
+      hasPlanetary: dayEvents.some(e => e.type === 'planetary'),
+      hasRegional: dayEvents.some(e => e.type === 'regional'),
+      hasSector: dayEvents.some(e => e.type === 'sector')
     })
     d = d.add(1, 'day')
   }
@@ -278,9 +282,21 @@ onMounted(() => {
   color: var(--type-prerelease);
 }
 
+.day.hasRegional {
+  background-color: var(--type-regional) !important;
+  color: white !important;
+  border: 1px solid var(--type-regional) !important;
+}
+
+.day.hasRegional .count {
+  color: var(--type-prerelease);
+}
+
+
 .day.hasTournament.active .count,
 .day.hasPrerelease.active .count,
 .day.hasShowdown.active .count,
+.day.hasRegional.active .count,
 .day.hasPlanetary.active .count {
   color: white;
 }

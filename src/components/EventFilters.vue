@@ -45,6 +45,8 @@ const typeLabels = {
   'showdown': 'showdown',
   'prerelease': 'prerelease',
   'planetary': 'planetary',
+  'sector': 'sector',
+  'regional': 'regional',
   'tournament': 'turnaj'
 }
 
@@ -122,6 +124,8 @@ const toggleType = (type) => {
 
 .type-label.weekly:has(input:checked) { background-color: var(--type-weekly); }
 .type-label.showdown:has(input:checked) { background-color: var(--type-showdown); }
+.type-label.sector:has(input:checked) { background-color: var(--type-sector); }
+.type-label.regional:has(input:checked) { background-color: var(--type-regional); }
 .type-label.prerelease:has(input:checked) { background-color: var(--type-prerelease); color: #1a1a1a; }
 .type-label.planetary:has(input:checked) { background-color: var(--type-planetary); }
 .type-label.tournament:has(input:checked) { background-color: var(--type-tournament); }
