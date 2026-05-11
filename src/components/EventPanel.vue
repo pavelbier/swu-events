@@ -1,6 +1,9 @@
 <template>
   <div class="panel">
-    <h3 v-if="store.filteredEvents.length > 0">{{ eventsHeading }}</h3>
+    <div class="panel-top">
+      <h3 v-if="store.filteredEvents.length > 0">{{ eventsHeading }}</h3>
+      <a href="#calendar" class="calendar-link">📅 Turnajový kalendář</a>
+    </div>
 
     <div class="events-section">
       <div v-if="store.isLoading" class="loading">
@@ -140,12 +143,38 @@ const getEventOpacity = (event) => {
   position: relative;
 }
 
+.panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
 h3 {
-  margin: 0 0 12px 0;
+  margin: 0;
   font-size: 1.2em;
   color: var(--text-primary);
   font-weight: 600;
+}
+
+.calendar-link {
+  font-size: 0.78em;
+  color: var(--text-link);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border: 1px solid var(--border-button);
+  border-radius: 6px;
+  background: var(--bg-button);
+  transition: background 0.15s, border-color 0.15s;
   flex-shrink: 0;
+}
+
+.calendar-link:hover {
+  background: var(--border-button);
+  border-color: var(--text-link);
 }
 
 .no-events {

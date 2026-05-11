@@ -1,5 +1,6 @@
 <template>
-  <div class="layout" :style="{ '--map-pct': mapPercent + '%' }">
+  <CalendarView v-if="currentView === 'calendar'" />
+  <div v-else class="layout" :style="{ '--map-pct': mapPercent + '%' }">
     <MapView class="map-area" />
     <div
       class="divider"
@@ -19,12 +20,20 @@ import MapView from '@/components/MapView.vue'
 import EventPanel from '@/components/EventPanel.vue'
 import EventFilters from '@/components/EventFilters.vue'
 import TimelineMonth from '@/components/TimelineMonth.vue'
+import CalendarView from '@/views/CalendarView.vue'
 import { useEventsStore } from '@/stores/eventsStore'
 
 const store = useEventsStore()
 
-// Načíst události z GitHubu při startu
+// Načíst události při startu
 store.loadEvents()
+
+// Hash-based navigace: #calendar = turnajový kalendář
+const currentView = ref(window.location.hash === '#calendar' ? 'calendar' : 'home')
+
+const onHashChange = () => {
+  currentView.value = window.location.hash === '#calendar' ? 'calendar' : 'home'
+}
 
 // Šířka mapy v procentech (třetina až polovina)
 const MIN_MAP_PCT = 33.33
@@ -97,6 +106,7 @@ onMounted(() => {
   document.addEventListener('touchmove', doResize)
   document.addEventListener('touchend', stopResize)
   window.addEventListener('resize', onWindowResize)
+  window.addEventListener('hashchange', onHashChange)
   calcMaxEvents()
 })
 
@@ -106,6 +116,7 @@ onUnmounted(() => {
   document.removeEventListener('touchmove', doResize)
   document.removeEventListener('touchend', stopResize)
   window.removeEventListener('resize', onWindowResize)
+  window.removeEventListener('hashchange', onHashChange)
 })
 </script>
 
