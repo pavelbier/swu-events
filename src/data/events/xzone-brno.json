@@ -46,5 +46,18 @@
       "lng": 16.596614228835808
     },
     "url": "https://melee.gg/Tournament/View/398612"
+  },
+  {
+    "title": "SW:U A Lawless Time Store Showndown Tournament",
+    "type": "showdown",
+    "dateFrom": "2026-06-13T10:00",
+    "dateTo": "2026-06-13T17:00",
+    "location": {
+      "city": "Brno",
+      "place": "Xzone",
+      "lat": 49.22133599629136,
+      "lng": 16.596614228835808
+    },
+    "url": "https://melee.gg/Tournament/View/431125"
   }
 ]
