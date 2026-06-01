@@ -11,5 +11,18 @@
       "lng": 14.481282826741477
     },
     "url":"https://melee.gg/Tournament/View/407251"
+  },
+  {
+    "title": "DEKL - Store Showdone - LAW",
+    "type": "showdown",
+    "dateFrom": "2026-06-14T10:30",
+    "dateTo": "2026-06-14T17:00",
+    "location": {
+      "city": "České Budějovice",
+      "place": "DEKL",
+      "lat": 48.975510329141294,
+      "lng": 14.481282826741477
+    },
+    "url": "https://deklcb.cz/tournaments/star-wars-unlimited-store-showdone-a-lawless-time"
   }
 ]
