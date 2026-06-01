@@ -67,5 +67,57 @@
       "lng": 14.450206803230738
     },
     "url": "https://melee.gg/Tournament/View/415913"
+  },
+  {
+    "title": "Eternal Showdown",
+    "type": "showdown",
+    "dateFrom": "2026-06-14T10:30",
+    "dateTo": "2026-06-14T18:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url": "https://melee.gg/Tournament/View/430400"
+  },
+  {
+    "title": "Pre-release ASH - Najada - pátek",
+    "type": "prerelease",
+    "dateFrom": "2026-07-10T17:30",
+    "dateTo": "2026-07-10T22:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url":"https://melee.gg/Tournament/View/432330"
+  },
+  {
+    "title": "Pre-release ASH - Najada - sobota dopo",
+    "type": "prerelease",
+    "dateFrom": "2026-07-11T10:30",
+    "dateTo": "2026-07-11T15:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url":"https://melee.gg/Tournament/View/432331"
+  },
+  {
+    "title": "Pre-release ASH - Najada - sobota odpo",
+    "type": "prerelease",
+    "dateFrom": "2026-07-11T15:00",
+    "dateTo": "2026-07-11T19:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url":"https://melee.gg/Tournament/View/433087"
   }
 ]
