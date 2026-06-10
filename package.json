@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && git -C dist init && git -C dist checkout -b page && git -C dist add -A && git -C dist commit -m \"deploy\" && git -C dist push https://github.com/pavelbier/swu-events.git page --force"
+    "deploy": "npx rimraf dist && vite build && git -C dist init && git -C dist checkout -b page && git -C dist add -A && git -C dist commit -m \"deploy\" && git -C dist push git@github.com:pavelbier/swu-events.git page --force"
   },
   "dependencies": {
     "@vue-leaflet/vue-leaflet": "^0.10.1",
