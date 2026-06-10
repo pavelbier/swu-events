@@ -77,13 +77,14 @@ import { useEventsStore } from '@/stores/eventsStore'
 
 const store = useEventsStore()
 
-const calendarTypes = ['showdown', 'planetary', 'regional', 'sector']
+const calendarTypes = ['showdown', 'prerelease', 'planetary', 'regional', 'sector']
 const selectedTypes = ref([...calendarTypes])
 const timeFilter = ref(null) // null | 'prevMonth' | 'thisMonth' | 'fullYear'
 const currentYear = dayjs().year()
 
 const typeLabels = {
   showdown: 'showdown',
+  prerelease: 'prerelease',
   planetary: 'planetary',
   regional: 'regional',
   sector: 'sector',
@@ -254,10 +255,11 @@ h1 {
 }
 
 .type-label:has(input:checked) { color: white; }
-.type-label.showdown:has(input:checked) { background-color: var(--type-showdown); }
-.type-label.planetary:has(input:checked) { background-color: var(--type-planetary); }
-.type-label.regional:has(input:checked) { background-color: var(--type-regional); }
-.type-label.sector:has(input:checked) { background-color: var(--type-sector); }
+.type-label.showdown:has(input:checked)   { background-color: var(--type-showdown); }
+.type-label.prerelease:has(input:checked) { background-color: var(--type-prerelease); color: #1a1a1a; }
+.type-label.planetary:has(input:checked)  { background-color: var(--type-planetary); }
+.type-label.regional:has(input:checked)   { background-color: var(--type-regional); }
+.type-label.sector:has(input:checked)     { background-color: var(--type-sector); }
 
 .filter-sep {
   color: var(--border-light);
@@ -393,10 +395,11 @@ h1 {
   margin-left: 6px;
 }
 
-.type.showdown { background-color: var(--type-showdown); }
-.type.planetary { background-color: var(--type-planetary); }
-.type.regional { background-color: var(--type-regional); }
-.type.sector { background-color: var(--type-sector); }
+.type.showdown   { background-color: var(--type-showdown); }
+.type.prerelease { background-color: var(--type-prerelease); color: #1a1a1a; }
+.type.planetary  { background-color: var(--type-planetary); }
+.type.regional   { background-color: var(--type-regional); }
+.type.sector     { background-color: var(--type-sector); }
 
 .event-description {
   font-size: 0.85em;
