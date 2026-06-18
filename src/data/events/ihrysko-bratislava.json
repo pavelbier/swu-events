@@ -76,5 +76,17 @@
       "lng": 17.138407074479147
     },
     "url":"https://melee.gg/Tournament/View/409437"
-  }
+  },
+  {
+    "title": "Planetary - iHRYsko Bratislava - Premier",
+    "type": "planetary",
+    "dateFrom": "2026-09-05T09:00",
+    "dateTo": "2026-09-05T18:00",
+    "location": {
+      "city": "Bratislava",
+      "place": "iHRYsko store",
+      "lat": 48.16823106987522,
+      "lng": 17.138407074479147
+    }
+  },  
 ]
