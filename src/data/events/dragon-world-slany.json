@@ -67,6 +67,58 @@
       "lng": 14.082533916164772
     },
     "url": "https://dragon-world.store/produkt/vstupenka-store-showdown-trilogy-swu/"
+  },
+  {
+    "title": "Pre-Release ASH - dopo 1",
+    "type": "prerelease",
+    "dateFrom": "2026-07-12T10:30",
+    "dateTo": "2026-07-12T14:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://melee.gg/Tournament/View/433705"
+  },
+  {
+    "title": "Pre-Release ASH - odpo 2",
+    "type": "prerelease",
+    "dateFrom": "2026-07-12T14:30",
+    "dateTo": "2026-07-12T18:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://melee.gg/Tournament/View/433706"
+  },
+  {
+    "title": "Pre-Release ASH - dopo 3",
+    "type": "prerelease",
+    "dateFrom": "2026-07-18T10:30",
+    "dateTo": "2026-07-18T14:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://melee.gg/Tournament/View/433707"
+  },
+  {
+    "title": "Pre-Release ASH - odpo 3",
+    "type": "prerelease",
+    "dateFrom": "2026-07-18T14:30",
+    "dateTo": "2026-07-18T18:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://melee.gg/Tournament/View/433709"
   }
   
 ]
