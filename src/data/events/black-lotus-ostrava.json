@@ -16,5 +16,17 @@
       "lng": 18.29047933948122
     },
     "url": "https://www.facebook.com/groups/769631581921123"
+  },
+  {
+    "title": "Planetary Qualifier",
+    "type": "planetary",
+    "dateFrom": "2026-09-12T10:00",
+    "dateTo": "2026-09-12T22:00",
+    "location": {
+      "city": "Ostrava",
+      "place": "Black Lotus",
+      "lat": 49.83461688579627,
+      "lng": 18.29047933948122
+    }
   }
 ]
