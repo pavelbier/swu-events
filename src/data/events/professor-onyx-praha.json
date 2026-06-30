@@ -41,5 +41,18 @@
       "lng": 14.405838578144332
     },
     "url": "https://melee.gg/Tournament/View/426225"
+  },
+  {
+    "title": "Prerelease Star Wars Unlimited Ashes of the Empire",
+    "type": "prerelease",
+    "dateFrom": "2026-07-14T17:00",
+    "dateTo": "2026-07-14T20:00",
+    "location": {
+      "city": "Praha",
+      "place": "Professor Onyx",
+      "lat": 50.07633494350315,
+      "lng": 14.405838578144332
+    },
+    "url":"https://melee.gg/Tournament/View/440082"
   }
 ]
