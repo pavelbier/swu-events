@@ -28,5 +28,18 @@
       "lng": 15.845218377070807
     },
     "url":"https://melee.gg/Tournament/View/399544"
+  },
+  {
+    "title": "Prerelease - Star Wars: Ashes of the Empire",
+    "type": "prerelease",
+    "dateFrom": "2026-07-17T17:00",
+    "dateTo": "2026-07-17T19:00",
+    "location": {
+      "city": "Hradec Králové",
+      "place": "Untap",
+      "lat": 50.214513264991844, 
+      "lng": 15.845218377070807
+    },
+    "url":"https://melee.gg/Tournament/View/431711"
   }
 ]
