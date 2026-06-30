@@ -44,29 +44,16 @@
     "url": "https://melee.gg/Tournament/View/421948"
   },  
   {
-    "title": "Ashes of the Empire Pre Release - Wombat Games",
+    "title": "Star Wars: Unlimited - Ashes of the Empire: Prerelease",
     "type": "prerelease",
-    "dateFrom": "2026-07-10T17:30",
-    "dateTo": "2026-07-10T22:00",
+    "dateFrom": "2026-07-11T10:00",
+    "dateTo": "2026-07-11T13:00",
     "location": {
       "city": "Pardubice",
       "place": "Tolarie",
       "lat": 50.04010257701762,
       "lng": 15.779020944528394
     },
-    "url": "https://melee.gg/Tournament/View/435969"
-  },  
-  {
-    "title": "Ashes of Empire - Pre Release - NEDĚLE - Wombat Games",
-    "type": "prerelease",
-    "dateFrom": "2026-07-12T10:30",
-    "dateTo": "2026-07-12T14:00",
-    "location": {
-      "city": "Pardubice",
-      "place": "Tolarie",
-      "lat": 50.04010257701762,
-      "lng": 15.779020944528394
-    },
-    "url": "https://melee.gg/Tournament/View/439734"
+    "url": "https://melee.gg/Tournament/View/431969"
   }
 ]
