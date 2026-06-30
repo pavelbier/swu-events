@@ -24,5 +24,31 @@
       "lng": 14.481282826741477
     },
     "url": "https://deklcb.cz/tournaments/star-wars-unlimited-store-showdone-a-lawless-time"
+  },
+  {
+    "title": "Star Wars Unlimited: Ashes of the Empire - prerelease #1",
+    "type": "prerelease",
+    "dateFrom": "2026-07-15T17:00",
+    "dateTo": "2026-07-15T20:00",
+    "location": {
+      "city": "České Budějovice",
+      "place": "DEKL",
+      "lat": 48.975510329141294,
+      "lng": 14.481282826741477
+    },
+    "url":"https://melee.gg/Tournament/View/437327"
+  },
+  {
+    "title": "Star Wars Unlimited: Ashes of the Empire - prerelease #2",
+    "type": "prerelease",
+    "dateFrom": "2026-07-15T21:00",
+    "dateTo": "2026-07-15T23:00",
+    "location": {
+      "city": "České Budějovice",
+      "place": "DEKL",
+      "lat": 48.975510329141294,
+      "lng": 14.481282826741477
+    },
+    "url":"https://melee.gg/Tournament/View/437331"
   }
 ]
