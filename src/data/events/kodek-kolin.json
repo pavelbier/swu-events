@@ -42,5 +42,18 @@
       "lng": 15.201706052774712
     },
     "url": "https://melee.gg/Tournament/View/418615"
+  },
+  {
+    "title": "Prerelease - Ashes of the Empire",
+    "type": "prerelease",
+    "dateFrom": "2026-07-16T17:00",
+    "dateTo": "2026-07-16T20:00",
+    "location": {
+      "city": "Kolín",
+      "place": "KODEK",
+      "lat": 50.023831637256066,
+      "lng": 15.201706052774712
+    },
+    "url":"https://melee.gg/Tournament/View/439152"
   }
 ]
