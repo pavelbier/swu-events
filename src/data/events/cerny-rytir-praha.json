@@ -61,6 +61,18 @@
     }
   },
   {
+    "title": "Pre-release ASH v Černém rytíři vol. 1",
+    "type": "prerelease",
+    "dateFrom": "2026-07-11T10:30",
+    "dateTo": "2026-07-11T13:00",
+    "location": {
+      "city": "Praha",
+      "place": "Černý rytíř",
+      "lat": 50.09112804971041,
+      "lng": 14.441780631849527
+    }
+  },
+  {
     "title": "Pre-release ASH v Černém rytíři vol. 2",
     "type": "prerelease",
     "dateFrom": "2026-07-12T17:00",
