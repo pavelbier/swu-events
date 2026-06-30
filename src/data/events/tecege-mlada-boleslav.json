@@ -28,5 +28,18 @@
       "lng": 14.91318772732187
     },
     "url": "https://melee.gg/Tournament/View/397786"
+  },
+  {
+    "title": "ASH TeCeGe MB",
+    "type": "prerelease",
+    "dateFrom": "2026-07-17T16:30",
+    "dateTo": "2026-07-17T19:00",
+    "location": {
+      "city": "Mladá Boleslav",
+      "place": "TeCeGe",
+      "lat": 50.4214399684709,
+      "lng": 14.91318772732187
+    },
+    "url":"https://discord.com/channels/1229838992304771112/1299404167730692097"
   }
 ]
