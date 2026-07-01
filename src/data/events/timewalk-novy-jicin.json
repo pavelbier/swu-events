@@ -11,5 +11,18 @@
       "lng": 18.00887627311152
     },
     "url":"https://www.facebook.com/events/2917535828440947/"
+  },
+  {
+    "title": "Pre-release ASH",
+    "type": "prerelease",
+    "dateFrom": "2026-07-12T10:00",
+    "dateTo": "2026-07-12T17:00",
+    "location": {
+      "city": "Nový Jičín",
+      "place": "TimeWalk",
+      "lat": 49.59518202004867, 
+      "lng": 18.00887627311152
+    },
+    "url":"https://fb.me/e/7imzoole1"
   }
 ]
