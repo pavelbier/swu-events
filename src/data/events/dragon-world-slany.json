@@ -119,6 +119,19 @@
       "lng": 14.082533916164772
     },
     "url": "https://melee.gg/Tournament/View/433709"
+  },
+  {
+    "title": "Dragon World Store Showdown - ASH",
+    "type": "showdown",
+    "dateFrom": "2026-08-29T11:00",
+    "dateTo": "2026-08-29T17:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://melee.gg/Tournament/View/449751"
   }
   
 ]
