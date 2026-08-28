@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Planetary - Ratmayer Szombathely - Ashes of the Empire",
+    "type": "planetary",
+    "dateFrom": "2026-09-12T09:00",
+    "dateTo": "2026-09-12T18:00",
+    "location": {
+      "city": "Szombathely",
+      "place": "Ratmayer Sport & Game Bar",
+      "lat": 47.2349342,
+      "lng": 16.6069321
+    },
+    "url": "https://melee.gg/Tournament/View/453090"
+  }
+]

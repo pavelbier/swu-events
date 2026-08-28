@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Regional Championship Utrecht - Limited & Premier / Eternal Open",
+    "type": "regional",
+    "dateFrom": "2026-10-31T09:00",
+    "dateTo": "2026-11-01T20:00",
+    "location": {
+      "city": "Utrecht",
+      "place": "Jaarbeurs",
+      "lat": 52.0845399,
+      "lng": 5.1040766
+    }
+  }
+]

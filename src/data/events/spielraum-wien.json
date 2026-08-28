@@ -26,15 +26,16 @@
     "url": "https://www.spielraum.co.at/de/page/competitions/star-wars-termine/planetary-qualifier"
   },
   {
-    "title": "Planetary - SpielRaum Wien",
+    "title": "Planetary - SpielRaum Wien - Ashes of the Empire",
     "type": "planetary",
-    "dateFrom": "2026-09-05T10:00",
-    "dateTo": "2026-09-05T18:00",
+    "dateFrom": "2026-09-05T11:00",
+    "dateTo": "2026-09-05T19:00",
     "location": {
       "city": "Wien",
       "place": "SpielRaum",
       "lat": 48.19628951253475,
       "lng": 16.348276865906392
-    }
+    },
+    "url": "https://melee.gg/Tournament/View/443065"
   }
 ]

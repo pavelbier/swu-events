@@ -37,5 +37,18 @@
       "lng": 15.774957323250552
     },
     "url": "https://melee.gg/Tournament/View/439734"
+  },
+  {
+    "title": "Ashes of Empire - Showdown - Premier - Wombat Games",
+    "type": "showdown",
+    "dateFrom": "2026-09-06T10:30",
+    "dateTo": "2026-09-06T15:30",
+    "location": {
+      "city": "Pardubice",
+      "place": "Wombat Games",
+      "lat": 50.03309594728701,
+      "lng": 15.774957323250552
+    },
+    "url": "https://melee.gg/Tournament/View/447793"
   }
 ]

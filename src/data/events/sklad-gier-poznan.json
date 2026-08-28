@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Planetary - Skład Gier Poznań - Ashes of the Empire",
+    "type": "planetary",
+    "dateFrom": "2026-09-19T09:00",
+    "dateTo": "2026-09-19T18:00",
+    "location": {
+      "city": "Poznań",
+      "place": "Skład Gier",
+      "lat": 52.4003172,
+      "lng": 16.928004
+    },
+    "url": "https://melee.gg/Tournament/View/441718"
+  }
+]

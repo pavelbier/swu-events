@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Sector Qualifier Zagreb - Limited",
+    "type": "sector",
+    "dateFrom": "2026-08-22T09:00",
+    "dateTo": "2026-08-22T20:00",
+    "location": {
+      "city": "Zagreb",
+      "place": "Magic Omens",
+      "lat": 45.7917759,
+      "lng": 15.9560637
+    }
+  }
+]

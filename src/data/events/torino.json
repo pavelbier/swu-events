@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Sector Qualifier Torino - Limited & Premier",
+    "type": "sector",
+    "dateFrom": "2026-09-19T09:00",
+    "dateTo": "2026-09-19T20:00",
+    "location": {
+      "city": "Torino",
+      "place": "Scalo Eventi Torino",
+      "lat": 45.1097538,
+      "lng": 7.6325962
+    },
+    "url": "https://www.fanfinity.gg/event/star-wars-unlimited-sector-qualifier-turin-2026/"
+  }
+]
