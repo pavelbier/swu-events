@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Sector Qualifier Wrocław - Premier & Limited",
+    "type": "sector",
+    "dateFrom": "2027-01-23T10:00",
+    "dateTo": "2027-01-24T22:00",
+    "location": {
+      "city": "Wrocław",
+      "place": "Hotel GEM",
+      "lat": 51.1252935,
+      "lng": 17.0713181
+    }
+  }
+]
