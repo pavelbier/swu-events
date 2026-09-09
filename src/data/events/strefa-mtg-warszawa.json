@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Homeworlds Planetary Qualifier - Strefa MTG Warszawa - Premier",
+    "type": "planetary",
+    "dateFrom": "2026-11-28T09:00",
+    "dateTo": "2026-11-28T18:00",
+    "location": {
+      "city": "Warszawa",
+      "place": "Strefa MTG",
+      "lat": 52.2171753,
+      "lng": 21.0175516
+    }
+  }
+]

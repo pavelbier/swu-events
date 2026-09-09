@@ -1,9 +1,21 @@
 [
   {
-    "title": "Sector Qualifier Zagreb - Limited",
-    "type": "sector",
+    "title": "Planetary Qualifier Zagreb - Limited",
+    "type": "planetary",
     "dateFrom": "2026-08-22T09:00",
     "dateTo": "2026-08-22T20:00",
+    "location": {
+      "city": "Zagreb",
+      "place": "Magic Omens",
+      "lat": 45.7917759,
+      "lng": 15.9560637
+    }
+  },
+  {
+    "title": "Homeworlds Planetary Qualifier Zagreb - Premier",
+    "type": "planetary",
+    "dateFrom": "2026-11-14T09:00",
+    "dateTo": "2026-11-14T18:00",
     "location": {
       "city": "Zagreb",
       "place": "Magic Omens",

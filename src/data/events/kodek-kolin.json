@@ -55,5 +55,17 @@
       "lng": 15.201706052774712
     },
     "url":"https://melee.gg/Tournament/View/439152"
+  },
+  {
+    "title": "Homeworlds Planetary Qualifier Premier - KODEK Kolín",
+    "type": "planetary",
+    "dateFrom": "2027-01-09T10:00",
+    "dateTo": "2027-01-09T18:00",
+    "location": {
+      "city": "Kolín",
+      "place": "KODEK",
+      "lat": 50.023831637256066,
+      "lng": 15.201706052774712
+    }
   }
 ]

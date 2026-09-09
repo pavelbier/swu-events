@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Homeworlds Planetary Qualifier - Plan-Sza Poznań - Premier",
+    "type": "planetary",
+    "dateFrom": "2026-11-14T09:00",
+    "dateTo": "2026-11-14T18:00",
+    "location": {
+      "city": "Poznań",
+      "place": "Plan-Sza",
+      "lat": 52.3998649,
+      "lng": 16.9352493
+    }
+  }
+]

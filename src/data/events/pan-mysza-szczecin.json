@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Homeworlds Planetary Qualifier - Pan Mysza Szczecin - Limited",
+    "type": "planetary",
+    "dateFrom": "2026-11-14T09:00",
+    "dateTo": "2026-11-14T18:00",
+    "location": {
+      "city": "Szczecin",
+      "place": "Pan Mysza",
+      "lat": 53.4271315,
+      "lng": 14.5530619
+    }
+  }
+]

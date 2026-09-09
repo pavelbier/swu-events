@@ -37,5 +37,17 @@
       "lng": 16.348276865906392
     },
     "url": "https://melee.gg/Tournament/View/443065"
+  },
+  {
+    "title": "Homeworlds Planetary Qualifier - SpielRaum Wien - Eternal",
+    "type": "planetary",
+    "dateFrom": "2026-12-05T10:00",
+    "dateTo": "2026-12-05T18:00",
+    "location": {
+      "city": "Wien",
+      "place": "SpielRaum",
+      "lat": 48.19628951253475,
+      "lng": 16.348276865906392
+    }
   }
 ]

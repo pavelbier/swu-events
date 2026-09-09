@@ -9,9 +9,10 @@
       @update:center="onMove"
     >
 
-       <!-- Tile Layer -->
+       <!-- Tile Layer - OSM dlaždice ztmavené CSS filtrem (viz .leaflet-tile-pane níže) -->
       <LTileLayer
-        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution="&copy; OpenStreetMap"
       />
 
       <!-- Kruh zobrazující dosah hledání akcí -->
@@ -200,6 +201,16 @@ onUnmounted(() => {
   height: 100%;
   width: 100%;
   position: relative;
+}
+
+/* Ztmavení světlých OSM dlaždic - filtr je jen na tile pane,
+   markery a kruh v ostatních panech zůstávají nedotčené */
+.map :deep(.leaflet-container) {
+  background: var(--bg-panel);
+}
+
+.map :deep(.leaflet-tile-pane) {
+  filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9) saturate(0.5);
 }
 
 @media (max-width: 768px) {

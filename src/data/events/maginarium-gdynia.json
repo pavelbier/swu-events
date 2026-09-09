@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Homeworlds Planetary Qualifier - Maginarium Gdynia - Limited",
+    "type": "planetary",
+    "dateFrom": "2027-01-09T09:00",
+    "dateTo": "2027-01-09T18:00",
+    "location": {
+      "city": "Gdynia",
+      "place": "Maginarium",
+      "lat": 54.5158205,
+      "lng": 18.5388574
+    }
+  }
+]
