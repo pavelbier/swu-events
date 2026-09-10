@@ -1,0 +1,24 @@
+name: Validate JSON
+
+on:
+  push:
+    paths:
+      - 'src/data/events/**/*.json'
+  pull_request:
+    paths:
+      - 'src/data/events/**/*.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Validate JSON files
+        run: |
+          find src/data/events -name '*.json' -print0 | while IFS= read -r -d '' file; do
+            echo "Checking $file"
+            jq empty "$file" || exit 1
+          done
