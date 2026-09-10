@@ -1,6 +1,6 @@
 [
   {
-    "title": "Sector Qualifier Wrocław - Premier & Limited",
+    "title": "Star Wars™: Unlimited Sector Qualifier Wroclaw 2027",
     "type": "sector",
     "dateFrom": "2027-01-23T10:00",
     "dateTo": "2027-01-24T22:00",
@@ -9,6 +9,7 @@
       "place": "Hotel GEM",
       "lat": 51.1252935,
       "lng": 17.0713181
-    }
+    },
+    "url": "https://my.fanfinity.gg/convention/50/events"
   }
 ]
