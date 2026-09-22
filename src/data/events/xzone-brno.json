@@ -85,5 +85,18 @@
       "lng": 16.596614228835808
     },
     "url":"https://melee.gg/Tournament/View/464688"
-  }
+  },
+  {
+    "title": "SW:U A Homeworlds Prerelease turnaj",
+    "type": "prerelease",
+    "dateFrom": "2026-10-03T10:00",
+    "dateTo": "2026-10-03T16:00",
+    "location": {
+      "city": "Brno",
+      "place": "Xzone",
+      "lat": 49.22133599629136,
+      "lng": 16.596614228835808
+    },
+    "url": "https://melee.gg/Tournament/View/467764"
+  }  
 ]
