@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Najada – Brno: Homeworlds Pre-Release – Run #1",
+    "type": "prerelease",
+    "dateFrom": "2026-10-04T10:30",
+    "dateTo": "2026-10-04T15:00",
+    "location": {
+      "city": "Brno",
+      "place": "Najáda",
+      "lat": 49.1920708,
+      "lng": 16.6060211
+    },
+    "url":"https://melee.gg/Tournament/View/467220"
+  },
+  {
+    "title": "Najada – Brno: Homeworlds Pre-Release – Run #2",
+    "type": "prerelease",
+    "dateFrom": "2026-10-04T15:00",
+    "dateTo": "2026-10-04T19:00",
+    "location": {
+      "city": "Brno",
+      "place": "Najáda",
+      "lat": 49.1920708,
+      "lng": 16.6060211
+    },
+    "url":"https://melee.gg/Tournament/View/467221"
+  }
+]
