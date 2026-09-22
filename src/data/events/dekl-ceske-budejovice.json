@@ -39,16 +39,17 @@
     "url":"https://melee.gg/Tournament/View/437327"
   },
   {
-    "title": "Star Wars Unlimited: Ashes of the Empire - prerelease #2",
-    "type": "prerelease",
-    "dateFrom": "2026-07-15T21:00",
-    "dateTo": "2026-07-15T23:00",
+    "title": "SWU: Ashes of Empire: DEKL Store Showdone",
+    "type": "showdown",
+    "dateFrom": "2026-09-27T10:30",
+    "dateTo": "2026-09-12T18:00",
     "location": {
       "city": "České Budějovice",
       "place": "DEKL",
       "lat": 48.975510329141294,
       "lng": 14.481282826741477
     },
-    "url":"https://melee.gg/Tournament/View/437331"
-  }
+    "url":"https://melee.gg/Tournament/View/470130"
+  },
+  
 ]
