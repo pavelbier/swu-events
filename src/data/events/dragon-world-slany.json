@@ -134,7 +134,7 @@
     "url": "https://melee.gg/Tournament/View/449751"
   },
   {
-    "title": "Homeworlds Planetary Qualifier Limited",
+    "title": "Homeworlds Planetary Qualifier Limited - Sealed",
     "type": "planetary",
     "dateFrom": "2026-11-28T10:00",
     "dateTo": "2026-11-28T18:00",
@@ -143,6 +143,33 @@
       "place": "Dragon World Store",
       "lat": 50.231865988154446,
       "lng": 14.082533916164772
-    }
-  }
+    },
+    "url":"https://dragon-world.store/produkt/vstupenka-sw-u-homeworlds-planetary-qualifier/"
+  },
+  {
+    "title": "Pre-release Homeworld #1",
+    "type": "prerelease",
+    "dateFrom": "2026-10-03T10:30",
+    "dateTo": "2026-10-03T15:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://melee.gg/Tournament/View/458190"
+  },
+  {
+    "title": "Pre-release Homeworld #2",
+    "type": "prerelease",
+    "dateFrom": "2026-10-03T15:00",
+    "dateTo": "2026-10-03T19:00",
+    "location": {
+      "city": "Slaný",
+      "place": "Dragon World Store",
+      "lat": 50.231865988154446,
+      "lng": 14.082533916164772
+    },
+    "url": "https://melee.gg/Tournament/View/458195"
+  }  
 ]
