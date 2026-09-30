@@ -41,31 +41,5 @@
       "lng": 15.845218377070807
     },
     "url":"https://melee.gg/Tournament/View/431711"
-  },
-  {
-    "title": "Star Wars: Unlimited - Homeworlds - Pre Release - PÁTEK - Wombat Games",
-    "type": "prerelease",
-    "dateFrom": "2026-10-02T17:30",
-    "dateTo": "2026-10-02T22:00",
-    "location": {
-      "city": "Hradec Králové",
-      "place": "Untap",
-      "lat": 50.214513264991844, 
-      "lng": 15.845218377070807
-    },
-    "url":"https://melee.gg/Tournament/View/457793"
-  },
-  {
-    "title": "Star Wars: Unlimited - Homeworlds - Pre Release - NEDĚLE - Wombat Games",
-    "type": "prerelease",
-    "dateFrom": "2026-10-04T11:00",
-    "dateTo": "2026-10-04T16:00",
-    "location": {
-      "city": "Hradec Králové",
-      "place": "Untap",
-      "lat": 50.214513264991844, 
-      "lng": 15.845218377070807
-    },
-    "url":"https://melee.gg/Tournament/View/457794"
   }
 ]
