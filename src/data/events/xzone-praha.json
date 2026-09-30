@@ -98,7 +98,7 @@
     "title": "SWU Homeworlds dopolední prerelease Praha",
     "type": "prerelease",
     "dateFrom": "2026-10-04T10:00",
-    "dateTo": "2026-10-04T18:00",
+    "dateTo": "2026-10-04T14:00",
     "location": {
       "city": "Praha",
       "place": "Xzone HUB, OC Lužiny",
@@ -106,11 +106,18 @@
       "lng": 14.331860728835812
     },
     "url": "https://melee.gg/Tournament/View/464253"
+  },
+  {
+    "title": "SWU Homeworlds odpolední prerelease Praha",
+    "type": "prerelease",
+    "dateFrom": "2026-10-04T14:00",
+    "dateTo": "2026-10-04T18:00",
+    "location": {
+      "city": "Praha",
+      "place": "Xzone HUB, OC Lužiny",
+      "lat": 50.043853664895884,
+      "lng": 14.331860728835812
+    },
+    "url": "https://melee.gg/Tournament/View/464258"
   }
-
-
-
-
-
-  
 ]

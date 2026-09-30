@@ -1,5 +1,5 @@
 [
-  {    
+  {
     "title": "Lawless Time PreRelease - Wombat Games",
     "type": "prerelease",
     "dateFrom": "2026-03-06T17:00",
@@ -11,7 +11,7 @@
       "lng": 15.774957323250552
     },
     "url": "https://melee.gg/Tournament/View/400528"
-  },  
+  },
   {
     "title": "Ashes of the Empire Pre Release - Wombat Games",
     "type": "prerelease",
@@ -24,7 +24,7 @@
       "lng": 15.774957323250552
     },
     "url": "https://melee.gg/Tournament/View/435969"
-  },  
+  },
   {
     "title": "Ashes of Empire - Pre Release - NEDĚLE - Wombat Games",
     "type": "prerelease",
@@ -62,7 +62,20 @@
       "lat": 50.03309594728701,
       "lng": 15.774957323250552
     },
-    "url":"https://melee.gg/Tournament/View/457793"
+    "url": "https://melee.gg/Tournament/View/457793"
+  },
+  {
+    "title": "Star Wars: Unlimited - Homeworlds - Pre Release - SOBOTA - Wombat Games",
+    "type": "prerelease",
+    "dateFrom": "2026-10-03T10:30",
+    "dateTo": "2026-10-03T15:00",
+    "location": {
+      "city": "Pardubice",
+      "place": "Wombat Games",
+      "lat": 50.03309594728701,
+      "lng": 15.774957323250552
+    },
+    "url": "https://melee.gg/Tournament/View/475438"
   },
   {
     "title": "Star Wars: Unlimited - Homeworlds - Pre Release - NEDĚLE - Wombat Games",
@@ -75,6 +88,6 @@
       "lat": 50.03309594728701,
       "lng": 15.774957323250552
     },
-    "url":"https://melee.gg/Tournament/View/457794"
-  }  
+    "url": "https://melee.gg/Tournament/View/457794"
+  }
 ]

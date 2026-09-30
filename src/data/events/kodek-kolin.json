@@ -28,7 +28,7 @@
       "lat": 50.023831637256066,
       "lng": 15.201706052774712
     },
-    "url":"https://melee.gg/Tournament/View/401619"
+    "url": "https://melee.gg/Tournament/View/401619"
   },
   {
     "title": "KODEK STORE SHOWDOWN - A Lawless Time",
@@ -54,7 +54,20 @@
       "lat": 50.023831637256066,
       "lng": 15.201706052774712
     },
-    "url":"https://melee.gg/Tournament/View/439152"
+    "url": "https://melee.gg/Tournament/View/439152"
+  },
+  {
+    "title": "Prerelease - Homeworlds",
+    "type": "prerelease",
+    "dateFrom": "2026-10-08T17:00",
+    "dateTo": "2026-10-08T21:00",
+    "location": {
+      "city": "Kolín",
+      "place": "KODEK",
+      "lat": 50.023831637256066,
+      "lng": 15.201706052774712
+    },
+    "url": "https://melee.gg/Tournament/View/475456"
   },
   {
     "title": "Homeworlds Planetary Qualifier Premier - KODEK Kolín",
