@@ -119,5 +119,44 @@
       "lng": 14.450206803230738
     },
     "url":"https://melee.gg/Tournament/View/433087"
+  },
+  {
+    "title": "Homeworlds Prerelease – Run 1",
+    "type": "prerelease",
+    "dateFrom": "2026-10-02T17:30",
+    "dateTo": "2026-10-02T20:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url":"https://melee.gg/Tournament/View/457132"
+  },
+  {
+    "title": "Homeworlds Prerelease – Run 2",
+    "type": "prerelease",
+    "dateFrom": "2026-10-03T10:30",
+    "dateTo": "2026-10-03T14:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url":"https://melee.gg/Tournament/View/457136"
+  },
+  {
+    "title": "Homeworlds Prerelease – Run 3",
+    "type": "prerelease",
+    "dateFrom": "2026-10-03T14:30",
+    "dateTo": "2026-10-03T18:00",
+    "location": {
+      "city": "Praha",
+      "place": "Najáda",
+      "lat": 50.07952566299952,
+      "lng": 14.450206803230738
+    },
+    "url":"https://melee.gg/Tournament/View/457137"
   }
 ]
