@@ -58,13 +58,14 @@
   {
     "title": "HWM TeCeGe MB",
     "type": "prerelease",
-    "dateFrom": "2026-10-09T09:30",
-    "dateTo": "2026-10-09T13:30",
+    "dateFrom": "2026-10-10T09:30",
+    "dateTo": "2026-10-10T15:00",
     "location": {
       "city": "Mladá Boleslav",
       "place": "TeCeGe",
       "lat": 50.4214399684709,
       "lng": 14.91318772732187
-    }
+    },
+    "url":"https://melee.gg/Tournament/View/476870"
   }
 ]
